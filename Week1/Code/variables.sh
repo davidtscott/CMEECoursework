@@ -1,7 +1,7 @@
 #!/bin/bash
 # Author: David Scott david.scott18@imperial.ac.uk
 # Script: variables.sh
-# Desc: 
+# Desc: Shell script 
 # Arguments: 
 # Date: Oct 2018
 

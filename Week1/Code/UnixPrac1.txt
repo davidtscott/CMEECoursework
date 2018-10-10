@@ -1,0 +1,72 @@
+#Author: David Scott david.scott18@imperial.ac.uk
+#Script: UnixPrac1
+#Desc: First CMEE practical for Unix. Questions, answers and comments included.
+#	all answers are written as single line commands.  
+#Arguments:
+#Date: October 10th 2018
+
+##############  1  ################
+#1 Count how many lines are in each file 
+
+wc -l ../Data/fasta/*.fasta
+
+#count lines in any file with this directory that ends in .fasta
+
+#ALTERANTIVE: find ../Data/fasta/*.fasta -exec wc -l {} \;
+
+
+###############  2  ###############
+#2 Print everything starting from the second line for the E.coli genome
+
+grep -v E.coli ../Data/fasta/E.coli.fasta
+
+# (grep -v) invert match for excluding specific string (E.coli), from specific file path 
+#    (../Data/fasta/E.coli.fasta)
+
+# ALTERANTIVE tail -n+2 could be used if unable to access file and view it. i.e you just knew you had to start from line 2. 
+
+
+##############  3  ################
+#3 Count the sequence length of the E.coli genome
+
+grep -v E.coli ../Data/fasta/E.coli.fasta | tr -d "\n" | wc -m
+
+# First part of code as above, then (|) piped through (tr -d "\n") to remove all newline characters
+#  making the sequence one line, and finally (| wc -m) counts all remaining characters.
+
+
+##############  4  ################
+#4 Count the matches of "ATGC" sequence in the E.coli genome
+
+grep -v E.coli ../Data/fasta/E.coli.fasta | tr -d "\n" | grep -o "ATGC" | wc -l
+
+# First part as above. Piped through grep -o "ATGC", this takes each occurence of "ATGC" from the line and    
+#     creates a new line. Finally piped through wc -l to count the lines, as each "ATGC" accounts for one line.
+
+
+#############  5  #################
+#5 Compute the AT/GC ratio
+
+echo $(grep -v E.coli ../Data/fasta/E.coli.fasta | tr -d "\n" | grep -o [A,T] | wc -l) / $(grep -v E.coli ../Data/fasta/E.coli.fasta | tr -d "\n" | grep -o [G,C] | wc -l) | bc -l
+
+# Used same code as above but tweaked so that grep - o would create a new line for each occurance of A or T [A,T] 
+# Repeated but grep -o for the occurance of G or C [G,C]. 
+# Made both lines of code variables using $()
+# Used echo to print the results of each onto the screen seperated by a /
+# This would have resulted in 2306454 / 2379681 printed on screen, 
+#               i.e the sum needed for calculation of ratio in question. 
+# But as it was piped through bc -l within the one command line the command printed the final calculated ratio
+# bc -l runs calculator in interactive mode using the standard math library 
+ 
+#############  Bash Command Challenge ###############
+
+find ../Sandbox . -type f -exec ls -s {} \; | sort -n | head -10
+
+# find file with directory ../Sandbox 
+# file is a regular file type 
+# -exec COMMAND attaches command to file search and {} runs it on each file found \; until the last one.
+# ls -s prints the size of each file, in blocks.
+# sort -n sorts files numerically 
+# head -10 prints the first 10 files. 
+
+

@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+# Author: David Scott David.Scott18@imperial.ac.uk
+# Script: 
+# Desc: 
+# Arguments:
+# Date: Oct 2018
 
 """Some functions exemplifying the use of control statements """ 
 #docstrings are considered part of the running code (normal comments are

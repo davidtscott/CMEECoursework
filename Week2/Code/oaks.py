@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+# Author: David Scott David.Scott18@imperial.ac.uk
+# Script: 
+# Desc: 
+# Arguments:
+# Date: Oct 2018
 
 ## Finds just those taxa that are oak trees from a list of species
 

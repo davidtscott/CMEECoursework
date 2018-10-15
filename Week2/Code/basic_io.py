@@ -1,8 +1,8 @@
 ######################
 # FILE INPUT
 ######################
-# Open a file for reading
-f = open('../Sandbox/test.txt', 'r') 
+# Open a file for reading ('r')
+f = open('../Sandbox/test.txt', 'r')
 # Use "implicit" for loop:
 # if the object is a file, python will cycle over 
 for line in f: 
@@ -25,6 +25,7 @@ f.close()
 # Save the elements of a list to a file 
 list_to_save = range(100) 
 
+#open a file for writing ('w')
 f = open('../Sandbox/testout.txt','w')
 for i in list_to_save: 
     f.write(str(i) + '\n') ##Add a new line at the end 

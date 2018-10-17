@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+"""Shows use of inputting and outputting data in files to scripts"""
+
 ######################
 # FILE INPUT
 ######################

@@ -1,3 +1,20 @@
+#!/usr/bin/env python3
+
+"""Extracts tuples from within a tuple and outputs as seperate lines, 
+seperated by a blank line. 
+
+All code is annotated within the script.
+
+Author: David Scott (david.scott18@imperial.ac.uk)
+
+""" 
+
+__appname__ = '[]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program"
+
+
 birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
           ('Delichon urbica','House martin',19),
           ('Junco phaeonotus','Yellow-eyed junco',19.5),
@@ -15,5 +32,18 @@ birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
 # ALSO, PLEASE INCLUDE A DOCSTRING AT THE BEGINNING OF THIS FILE THAT 
 # SAYS WHAT THE SCRIPT DOES AND WHO THE AUTHOR IS
 
+# for every tuple in object birds, print
 for tuple in birds:
   print(tuple)
+  print("")
+
+# this prints each tuple seperately as opposed to
+# printing entire block as would happen just used 'birds' 
+
+# OR
+
+#for tuple in birds:
+#  print(tuple[0])
+#  print(tuple[1])
+#  print(tuple[2])
+#  print(" ")

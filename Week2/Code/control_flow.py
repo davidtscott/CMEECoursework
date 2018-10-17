@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-# Author: David Scott David.Scott18@imperial.ac.uk
-# Script: 
-# Desc: 
-# Arguments:
 # Date: Oct 2018
 
 """Some functions exemplifying the use of control statements """ 
@@ -21,7 +17,6 @@ import sys # module to interface our program with the operating system
 
 ## functions ## 
 def even_or_odd(x=0): #if not specified, x should take value 0.
-
     """Find whether a number x is even or odd."""
     if x % 2 == 0: #The conditional if # % here determines even or odd
         return "%d is Even!" % x #%d is how to format print number. can be %s etc. % x tells what number to use 

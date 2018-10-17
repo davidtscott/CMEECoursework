@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # Filename: using_name.py 
 
+""" shows use of main """ 
+
+
 if __name__ == '__main__':
     print('This program is being run by itself') #if being run by itself print this
 else: 

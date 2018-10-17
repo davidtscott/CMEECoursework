@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+""" Control flow examples """
+ 
+__appname__ = '[control flow examples]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program" 
 
 for i in range(3,17):
     print('hello')

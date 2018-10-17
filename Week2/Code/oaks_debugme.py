@@ -1,3 +1,25 @@
+#!/usr/bin/env python3
+
+"""Functions to detect and print oaks of genus 'Quercus'.
+
+Dispays "FOUND AN OAK!" when oak species is detected.
+
+Bug fixed of previous version (spelling)
+
+Added doctests to test functionality of functions. 
+
+All code is annotated within the script.
+
+Author: David Scott (david.scott18@imperial.ac.uk)
+
+""" 
+
+__appname__ = '[oaks_debugme]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program"
+
+
 import csv
 import sys
 import doctest
@@ -19,20 +41,22 @@ def is_an_oak(oakname):
 
     """
     oakname = oakname.lower() #bug, quercus missing a u
-    # Take string, split on space, then take index [0] of the generated list.
+    # Take string, split on space (" "), then take index [0] of the generated list.
     oakindex = oakname.split(" ")
-    if len(oakindex[0]) != 7:
-        return False
-    return oakname.startswith('quercus')
+    if len(oakindex[0]) != 7: #if length of first word in string not 7 characters
+        return False # return it as false
+    return oakname.startswith('quercus') # if
         
 
 def main(argv): 
+    """Takes data from input file, writes an output, prints content and if an oak
+    prints: FOUND AN OAK! """
     f = open('../Data/TestOaksData.csv','r')
     g = open('../Data/JustOaksData.csv','w')
     taxa = csv.reader(f)
-    next(taxa) #excludes header
+    next(taxa) ## EXCLUDES HEADER BEING PRINTED!! 
     csvwrite = csv.writer(g)
-    csvwrite.writerow(['Genus', 'species']) #adds header to new csv
+    csvwrite.writerow(['Genus', 'species']) ## ADDS HEADER!! 
     oaks = set()
     for row in taxa:
         print(row)

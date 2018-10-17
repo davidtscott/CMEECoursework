@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 # Author: David Scott David.Scott18@imperial.ac.uk
-# Script: 
-# Desc: 
-# Arguments:
 # Date: Oct 2018
+
+"""Using loops in python to manipulate data.""" 
+
+__appname__ = '[oaks]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program" 
 
 ## Finds just those taxa that are oak trees from a list of species
 

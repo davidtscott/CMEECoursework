@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+"""script to show the use of csv module in python."""
+
 import csv
 
 # Read a file containing: 

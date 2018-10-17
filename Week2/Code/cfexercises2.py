@@ -1,23 +1,35 @@
 #!/usr/bin/env python3
-# Author: David Scott David.Scott18@imperial.ac.uk
-# Script: 
-# Desc: 
-# Arguments:
-# Date: Oct 2018
 
-#### To be modified to make it a "module"
+""" Six functions to show the use of modules for 
+manipulation and calculation of variables. 
 
-"""Some functions exemplifying the use of..... """ 
+Main arguemnt prints results of each function using a default input value,
+to test functionality. 
 
-__appname__ = '[                  ]'
+Uses loops for factorial calculations. 
+
+Take input from command line.
+
+All code is annotated within the script.
+
+Author: David Scott (david.scott18@imperial.ac.uk)
+
+""" 
+
+__appname__ = '[control flow exercise 2]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __version__ = '0.0.1'
-__license__ = "License for this code/program" 
+__license__ = "License for this code/program"
+
+
+#### Modified script and made it a module. 
+#### All functions take arguements from the command line.
+#### Added test arguements, running it will output from each function to show they work.
+
 
 #### imports ####
 import sys
 
-#### constants ####
 
 #### functions ####
 def foo_1(x):
@@ -44,14 +56,14 @@ def foo_3(x, y, z):
     return [x, y, z]
 
 def foo_4(x):
-    """   """
+    """obtains factorial of x"""
     result = 1
     for i in range(1, x + 1):
         result = result * i
-    return result
+    return "The factorial of %d is %d" % (x, result)
 
 def foo_5(x): # a recursive function
-    """uses recusrion to obtain the factorial of x"""
+    """uses recursion to obtain the factorial of x"""
     if x == 1:
         return 1
     return x * foo_5(x - 1) #!x factorial of x 
@@ -66,6 +78,9 @@ def foo_6(x): #calculate the factorial of x in a different way
     return "The factorial is %d" % facto 
 
 def main(argv):
+    """Prints results of each function with a default numeric input,
+    from foo_1() to foo_6() in numeric order. 
+    Default value used: foo_1(8), 2(5, 15), 3(20, 10, 5), 4(5), 5(7), 6(8). """
     print(foo_1(8))
     print(foo_2(5, 15))
     print(foo_3(20, 10, 5))

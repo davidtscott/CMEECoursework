@@ -1,9 +1,29 @@
+#!/usr/bin/env python3
+
+"""DNA sequence alignment, improved version so that the output 
+includes each best alignment 
+
+Takes sequences as input from a single external file.
+see '../Data/align_seqs_better.txt'
+
+Saves best alignment and best score to a csv file.
+see '../Results/align_seqs_better.txt'
+
+All code is annotated within the script.
+
+Author: David Scott (david.scott18@imperial.ac.uk)
+""" 
+
+__appname__ = '[sequence alignment improved]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program"
+
 # These are the two sequences to match
 seq2 = "ATCGCCGGATTACGGG"
 seq1 = "CAATTCGGAT"
 
 import csv
-import pickle
 
 # assign the longest sequence s1, and the shortest to s2
 # l1 is the length of the longest, l2 that of the shortest
@@ -53,17 +73,17 @@ my_best_align = None
 my_best_score = -1
 best_ids = []
 for i in range(l1):
-    z = calculate_score(s1, s2, l1, l2, i)
+    z = calculate_score(s1, s2, l1, l2, i)  # function above
     g = open('../Results/align_seqs_better.txt','wb') #wb = writing binary. 
     #data written in the form of byte objects
-    if z > my_best_score:          #changes from > to >=
-        my_best_align = "." * i + s2
-        my_best_score = z
-        best_ids = []
-        best_ids.append(i)
-    elif z == my_best_score:
-        best_ids.append(i)
-    print(best_ids)
+    if z > my_best_score:       # if new score calculated(z) is greater than previous one
+        my_best_align = "." * i + s2 #creates new best align
+        my_best_score = z       # updates best score
+        best_ids = []           # creates emty list to store all best scores
+        best_ids.append(i)      # adds new one to it
+    elif z == my_best_score:    # or if its equals old best score
+        best_ids.append(i)      # also add to list of all best scores
+    print(best_ids)             # pritn list of all best scores
 
 outstr = ""
 for x in best_ids:
@@ -72,12 +92,3 @@ for x in best_ids:
 
 with open("../Results/align_seqs_better.txt", "w") as outfile:
     outfile.write(outstr)
-
-#print(s1)
-#print("Best score:", my_best_score)
-
-
-#csvwrite = csv.writer(g)
-#csvwrite.writerow(['Best alignment', 'Best score']) #adds header
-#csvwrite.writerow([my_best_align, my_best_score])
-#csvwrite.writerow([s1])

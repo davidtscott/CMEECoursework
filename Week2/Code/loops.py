@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 # Author: David Scott David.Scott18@imperial.ac.uk
-# Script: 
-# Desc: 
-# Arguments:
 # Date: Oct 2018
+
+"""basic boilerplate to demonstrate the use of loops in python """ 
+
+__appname__ = '[python loop example]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program" 
 
 # For loops in Python
 for i in range(5):

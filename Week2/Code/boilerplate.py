@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
 # Author: David Scott David.Scott18@imperial.ac.uk
-# Script: 
-# Desc: 
-# Arguments:
 # Date: Oct 2018
 
-""" describe app or program ... basic boiler plate ..... """ 
+"""basic boiler plate example, using sys module """ 
 
 __appname__ = '[python boilet plate example]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'

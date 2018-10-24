@@ -1,3 +1,11 @@
+#!/usr/bin/env Rscript
+# Author: David Scott
+# Contact: david.scott18@imperial.ac.uk
+# Date:  October 24 2018
+# Description: example boilerplate in R
+
+rm(list=ls()) # clears workspace
+
 # A boilerplate R script 
 
 MyFunction <- function(Arg1, Arg2){
@@ -8,8 +16,10 @@ MyFunction <- function(Arg1, Arg2){
 
     return (c(Arg1, Arg2)) #this is optional, but very useful 
 }
+
+MyFunction(1,2) #test the function
+MyFunction("Riki", "Tiki") #A different test
+
 # {} brackets tell R where specification of function start and end
 # indentation not required like in python
 #   but make code more readable
-MyFunction(1,2) #test the function
-MyFunction("Riki", "Tiki") #A different test

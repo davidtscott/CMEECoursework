@@ -1,3 +1,11 @@
+#!/usr/bin/env Rscript
+# Author: David Scott
+# Contact: david.scott18@imperial.ac.uk
+# Date:  October 24 2018
+# Description: Example of control flow constructs in R
+
+rm(list=ls()) # clears workspace
+
 ## Some code exemplifying control flow constructs in R
 
 ## If statement
@@ -17,7 +25,7 @@ if (z <= 0.5) {
 ## For loop using a sequence 
 for (i in 1:100){
     j <- i * i
-    print(paste(i, "squared is", j ))
+    print(paste(i, " squared is", j ))
     }
 
 ## For loop over vector of strings

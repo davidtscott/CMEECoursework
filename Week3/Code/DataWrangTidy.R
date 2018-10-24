@@ -2,7 +2,7 @@
 # Author: David Scott
 # Contact: david.scott18@imperial.ac.uk
 # Date:  October 24 2018
-# Description: data wrangling with tidyr and diplyr
+# Description: data wrangling with tidyr and dplyr
 
 rm(list=ls()) # clears workspace
 

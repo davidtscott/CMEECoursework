@@ -40,12 +40,11 @@
 │   ├── testcsv.csv
 │   └── TestOaksData.csv
 ├── README.md
-├── README.txt
 └── Sandbox
     ├── testout.txt
     ├── testp.p
     └── test.txt
 
-4 directories, 34 files
+4 directories, 33 files
 
 ```

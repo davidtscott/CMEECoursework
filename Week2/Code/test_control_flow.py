@@ -2,7 +2,9 @@
 
 """Some functions exemplifying the use of control statements"""
 
-__author__ = 'Your Name (Your.Name@your.institutional.email.address)'
+__appname__ = '[test_control_flow]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__license__ = "License for this code/program" 
 __version__ = '0.0.1'
 
 import sys

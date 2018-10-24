@@ -1,15 +1,10 @@
 #!/usr/bin/env python3
 
-"""Extracts tuples from within a tuple and outputs as seperate lines, 
-seperated by a blank line. 
-
-All code is annotated within the script.
-
-Author: David Scott (david.scott18@imperial.ac.uk)
+"""Extracts tuples from within a tuple and outputs as seperate lines
 
 """ 
 
-__appname__ = '[]'
+__appname__ = '[tuple]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"

@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
 
+""" ALigns two fasta sequences. """
+
+__appname__ = '[fasta alignment]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program"
+
 """Aligns any two .fasta sequences from seperate files. 
 Script takes inputs from user in command line, 
 otherwise has two default input .fasta files.  
@@ -8,16 +15,8 @@ for default files see:
     fasta_input('../Data/fasta/407228326.fasta')
     fasta_input('../Data/fasta/407228412.fasta')
 
-All code is annotated within the script.
-
-Author: David Scott (david.scott18@imperial.ac.uk)
-
 """ 
 
-__appname__ = '[fasta alignment]'
-__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
-__version__ = '0.0.1'
-__license__ = "License for this code/program"
 
 import sys 
 import csv 

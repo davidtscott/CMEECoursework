@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 """Shows use of inputting and outputting data in files to scripts"""
 
+__appname__ = '[basic_io]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program"
+
 ######################
 # FILE INPUT
 ######################

@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
 
-"""DNA sequence alignment, improved version so that the output 
-includes each best alignment 
+"""DNA sequence alignment, improved version""" 
+__appname__ = '[sequence alignment improved]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program"
+
+"""the output includes each best alignment 
 
 Takes sequences as input from a single external file.
 see '../Data/align_seqs_better.txt'
@@ -9,15 +14,7 @@ see '../Data/align_seqs_better.txt'
 Saves best alignment and best score to a csv file.
 see '../Results/align_seqs_better.txt'
 
-All code is annotated within the script.
-
-Author: David Scott (david.scott18@imperial.ac.uk)
 """ 
-
-__appname__ = '[sequence alignment improved]'
-__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
-__version__ = '0.0.1'
-__license__ = "License for this code/program"
 
 # These are the two sequences to match
 seq2 = "ATCGCCGGATTACGGG"

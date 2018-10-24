@@ -1,10 +1,16 @@
 #!/usr/bin/env python3
 
 """ Six functions to show the use of modules for 
-manipulation and calculation of variables. 
+manipulation and calculation of variables
+""" 
 
-Main arguemnt prints results of each function using a default input value,
-to test functionality. 
+__appname__ = '[control flow exercise 2]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program"
+
+"""Main arguemnt prints results of each function 
+using a default input value, to test functionality. 
 
 Uses loops for factorial calculations. 
 
@@ -15,12 +21,6 @@ All code is annotated within the script.
 Author: David Scott (david.scott18@imperial.ac.uk)
 
 """ 
-
-__appname__ = '[control flow exercise 2]'
-__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
-__version__ = '0.0.1'
-__license__ = "License for this code/program"
-
 
 #### Modified script and made it a module. 
 #### All functions take arguements from the command line.

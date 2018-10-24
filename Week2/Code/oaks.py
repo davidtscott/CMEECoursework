@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# Author: David Scott David.Scott18@imperial.ac.uk
 # Date: Oct 2018
 
 """Using loops in python to manipulate data.""" 

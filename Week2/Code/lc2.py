@@ -1,23 +1,21 @@
 #!/usr/bin/env python3
 
-"""Extracts tuples from a tuple of tuples of rainfal data. 
+"""Extracts tuples from a tuple of tuples of rainfal data."""
 
+__appname__ = '[]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program"
+
+"""
 Completes two tasks (below), twice by using both list comprehension and loops
     1- creates a list of month, rainfall tuples where the rainfall 
     was above 100.0 mm
 
     2- creates list of month names where the rainfall was below 50.0 mm
 
-All code is annotated within script.
-
-Author: David Scott (david.scott18@imperial.ac.uk)
-
 """ 
 
-__appname__ = '[]'
-__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
-__version__ = '0.0.1'
-__license__ = "License for this code/program"
 
 # Average UK Rainfall (mm) for 1910 by month
 # http://www.metoffice.gov.uk/climate/uk/datasets

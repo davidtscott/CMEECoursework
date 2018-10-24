@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 """script to show the use of csv module in python."""
+__appname__ = '[basic_csv]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program"
 
 import csv
 

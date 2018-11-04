@@ -55,4 +55,3 @@ outputfile_name <- paste("../Results/", inputfile_name, "_treeheights.csv", sep 
 print(outputfile_name)#prints new name of output file
 write.csv(TreeDF, outputfile_name, row.names = FALSE)
 # saves dataframe (TreeDF) to file named above. 
-

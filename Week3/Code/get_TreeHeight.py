@@ -13,12 +13,12 @@ import csv
 import math
 import os
 
-# read distance and degrees data into two lists
+# read distance, degrees and species names data into lists
 distance = []
 degrees = []
 names = []
 with open(sys.argv[1], 'r') as f:
-    next(f)
+    next(f)             # skips header
     treedata = csv.reader(f)
     for row in treedata:
             names.append(row[0])

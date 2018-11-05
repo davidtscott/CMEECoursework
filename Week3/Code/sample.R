@@ -20,5 +20,5 @@ result <- lapply(1:100, function(i) doit(x))
 ## Or using a for loop: 
 result <- vector("list", 100) #Preallocate/Initialize
 for(i in 1:100){
-  results[[i]] <- doit(x)
+  result[[i]] <- doit(x)
 }

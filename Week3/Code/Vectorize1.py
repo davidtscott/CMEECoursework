@@ -18,6 +18,7 @@ M = np.random.rand(1000, 1000)
 # define function to count each element or array M
 start1 = time.time()  # starts timer
 def SumAllElements(M):
+"""Counts sum of elements of an array """
     tot = 0
     for i in np.nditer(M): 
         tot += i

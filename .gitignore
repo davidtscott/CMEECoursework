@@ -1,3 +1,4 @@
+
 # Compiled source #
 ###################
 *.com
@@ -39,11 +40,25 @@ Thumbs.db
 
 ###python##
 *.pyc
+__pycache__/
 
-##R ##
+## R ##
 .RData
 .Rhistory
+.Rapp.history
 
 ### week
-Week4/
-Week5/
+Week6/
+
+# anyfile above 10mb
+./Week5/Data/EU/g250_06.tif
+./Week5/Data/EU/bio1_15.tif
+./Week5/Data/EU/bio1_16.tif
+./Week5/Data/EU/bio12_15.tif
+./Week5/Data/EU/bio12_16.tif
+./Week5/Data/SRTM_Channels_network/SRTM_Channels_network.dbf
+./Week5/Data/SRTM_Channels_network/SRTM_Channels_network.shp
+./Week5/Data/SAFE_layout_shapefiles/sloperaster.tif
+./Week5/Data/Borneo/MODIS_red_reflectance.tif
+./Week5/Data/Borneo/MODIS_blue_reflectance.tif
+./Week5/Data/Borneo/MODIS_NIR_reflectance.tif

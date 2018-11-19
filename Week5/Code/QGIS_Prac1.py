@@ -64,7 +64,7 @@ def zonalStats(layer, classMap, classCodes):
     within each landcover class.
     """
     # load the data into an array
-    bioclimLayer = gdal.Open('../Data/{f}_UK_BNG.tif'.format(f=layer))
+    bioclimLayer = gdal.Open('../Data/EU/{f}_UK_BNG.tif'.format(f=layer))
     bcData = bioclimLayer.ReadAsArray()
 
     # get and mask the no data values

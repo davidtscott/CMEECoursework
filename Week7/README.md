@@ -2,27 +2,27 @@
 ## Author: David Scott - _david.scott18@imperial.ac.uk_
 ## Date: _Nov - 2018_
 
-### Description:  [Enter description for project here]
+### Description:  [CMEE Coursework for Week7 - Python2. All scripts were written in visual studio code for python3 or Rstudio. Scripts stored in code directory and use relative paths to call data from Data and direct outputs to Results.]
 
 
-### Tree map
+### Map of directories with short description of each file. 
 ```
 .
 ├── Code
 │   ├── blackbirds.py : Using regex in python.
 │   ├── DrawFW.py : Creates and plots a synthetic food web network
-│   ├── fmr.R : b''
+│   ├── fmr.R :  Rscript for use in subproccessing in python
 │   ├── LV1.py : Lotka Volterra numerical integration model
 │   ├── LV2.py : L-V model, takes parameter values from command line 
 │   ├── LV3.py : Discrete time version of L-V model 
 │   ├── MyFirstJupyterNb.ipynb
-│   ├── Nets.R :  '
+│   ├── Nets.R : Network in R
 │   ├── profileme2.py : Second example of profiling functions in python
 │   ├── profileme.py : Example of profiling functions in python
 │   ├── __pycache__
-│   │   ├── blackbirds.cpython-35.pyc
-│   │   ├── profileme2.cpython-35.pyc
-│   │   └── profileme.cpython-35.pyc
+│   │   ├── blackbirds.cpython-35.pyc                   .gitignored
+│   │   ├── profileme2.cpython-35.pyc			.gitignored
+│   │   └── profileme.cpython-35.pyc			.gitignored
 │   ├── regexs.py : Example uses of regex in python. 
 │   ├── run_fmr_R.py : Use of subprocess to run Rscript. Prints 'Succesful' if succesful
 │   ├── RunLV.sh : Runs three scipts, LV1.py LV2.py and LV3.py and checks speed '
@@ -37,19 +37,18 @@
 │   ├── QMEE_Net_Mat_nodes.csv
 │   └── TestOaksData.csv
 ├── README.md
-├── README.tmp
 ├── Results
-│   ├── DrawFW.pdf
-│   ├── fmr_errFile.Rout
-│   ├── fmr_plot.pdf
-│   ├── fmr.R : b''out
-│   ├── LV2_model2.pdf
-│   ├── LV2_model.pdf
-│   ├── LV3_model1.pdf
-│   ├── LV3_model2.pdf
-│   ├── LV_model2.pdf
-│   ├── LV_model.pdf
-│   └── QMEENet.svg
+│   ├── DrawFW.pdf			.gitignored
+│   ├── fmr_errFile.Rout		.gitignored
+│   ├── fmr_plot.pdf			.gitignored
+│   ├── fmr.R : b''out			.gitignored
+│   ├── LV2_model2.pdf			.gitignored
+│   ├── LV2_model.pdf			.gitignored
+│   ├── LV3_model1.pdf			.gitignored
+│   ├── LV3_model2.pdf			.gitignored
+│   ├── LV_model2.pdf			.gitignored
+│   ├── LV_model.pdf			.gitignored
+│   └── QMEENet.svg			.gitignored
 └── Sandbox
 
 5 directories, 38 files

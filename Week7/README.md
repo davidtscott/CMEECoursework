@@ -38,19 +38,8 @@
 │   └── TestOaksData.csv
 ├── README.md
 ├── Results
-│   ├── DrawFW.pdf			.gitignored
-│   ├── fmr_errFile.Rout		.gitignored
-│   ├── fmr_plot.pdf			.gitignored
-│   ├── fmr.R : b''out			.gitignored
-│   ├── LV2_model2.pdf			.gitignored
-│   ├── LV2_model.pdf			.gitignored
-│   ├── LV3_model1.pdf			.gitignored
-│   ├── LV3_model2.pdf			.gitignored
-│   ├── LV_model2.pdf			.gitignored
-│   ├── LV_model.pdf			.gitignored
-│   └── QMEENet.svg			.gitignored
 └── Sandbox
 
-5 directories, 38 files
+5 directories, 27 files
 
 ```

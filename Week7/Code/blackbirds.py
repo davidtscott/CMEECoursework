@@ -2,10 +2,19 @@
 # Date: Nov 2018
 
 """
-
+Using regex in python.
 """ 
+"""
+Use of regex in python. Loads data and extracts data on kingdom,
+phylum and species name of each species in the file. 
 
-__appname__ = '[xxxx in python]'
+decode data to ASCII
+
+Prints and formas output to the screen. 
+"""
+
+
+__appname__ = '[regex in python]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program" 
@@ -43,6 +52,7 @@ reg_string = r"Kingdom\s(\w+).*?Phylum\s(\w+).*?Species\s(\w*\s\w+)"
 species = re.findall(reg_string, text)
 #print(species)
 
+# format and print output to screen
 print('{A1:<15}{B1:<15}{C1:<15}'.format(A1='Kingdom', B1='Phylum', C1='Species'))
 print('-'*50)
 for i in species:

@@ -1,10 +1,18 @@
 #!/usr/bin/env python3
 # Date: Nov 2018
 
-"""Example of numerical integration using Lotka-Volterra model,
-for predator prey relationship i two dimensional space.""" 
+"""
+Lotka Volterra numerical integration model
+"""
 
-__appname__ = '[numerical integration in python]'
+"""
+Example of numerical integration using Lotka-Volterra model,
+for predator prey relationship in two dimensional space.
+
+Prints two graphs to the ../Results directory
+""" 
+
+__appname__ = '[numerical integration (L-V) in python]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program" 
@@ -38,8 +46,8 @@ t = sc.linspace(0, 15, 1000) # 1000 point between 0 and 15
 # timescales matter in biology
 # depend on parameters. e.g tree would differ from bacteria 
 
-R0 = 10
-C0 = 5
+R0 = 10 # start point for R
+C0 = 5  # start point for C
 RC0 = sc.array([R0, C0])
 
 pops, infodict = integrate.odeint(dCR_dt, RC0, t, full_output=True)

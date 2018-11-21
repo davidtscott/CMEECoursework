@@ -1,8 +1,13 @@
 #!/usr/bin/env python3
 # Date: Nov 2018
 
-"""Second example of numerical integration using Lotka-Volterra model,
-for predator prey relationship i two dimensional space.
+"""
+L-V model, takes parameter values from command line 
+"""
+
+"""
+Second example of numerical integration using Lotka-Volterra model,
+for predator prey relationship in two dimensional space.
 
 Edited so that it can take parameter values from command line.
 sys.argv[1] = r, [2] = a, [3] = z, [4] = e. values converted to floats.
@@ -22,7 +27,6 @@ __version__ = '0.0.1'
 __license__ = "License for this code/program" 
 
 # example of numerical integration using lotka-volterra model
-
 
 ### Packages ###
 import scipy as sc 

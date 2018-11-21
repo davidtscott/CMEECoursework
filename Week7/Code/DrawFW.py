@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 # Date: Nov 2018
 
-"""Creates and plots a food web network""" 
+"""
+Creates and plots a synthetic food web network
+""" 
 
 __appname__ = '[food web networks in python]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
@@ -14,7 +16,9 @@ import scipy as sc
 import matplotlib.pyplot as p 
 
 def GenRdmAdjList(N = 2, C = 0.5): # C = connection probability 
-    """ 
+    """ Generates a random adjacency list of N -species 
+    food web with "connectance probability" C: the propability 
+    of having a link between any pair of secies in the web. 
     """
     Ids = range(N) # list of given range (N)
     ALst = [] #creates list

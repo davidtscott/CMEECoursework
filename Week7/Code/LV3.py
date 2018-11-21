@@ -1,8 +1,15 @@
 #!/usr/bin/env python3
 # Date: Nov 2018
 
-"""Second example of numerical integration using Lotka-Volterra model,
+"""
+Discrete time version of L-V model 
+""" 
+
+"""
+Example of numerical integration using Lotka-Volterra model,
 for predator prey relationship i two dimensional space.
+
+Discrete time version
 
 Edited so that it can take parameter values from command line.
 sys.argv[1] = r, [2] = a, [3] = z, [4] = e. values converted to floats.
@@ -86,7 +93,7 @@ p.plot(t, listpop[:,0], 'g-', label='Resource density') # plot time v resource (
 p.plot(t, listpop[:,1] , 'b-', label='Consumer density') # plot time v consumer (pred)
 p.grid()    # add grid lines
 p.legend(loc='best') # legend
-p.text(5, 15, "r = %.2f, a = %.2f, z = %.2f, e = %.2f" % (r, a, z, e), fontsize = 15)
+p.text(1, 15, "r = %.2f, a = %.2f, z = %.2f, e = %.2f" % (r, a, z, e), fontsize = 15)
 # add text line with parameter values r, a, z, e. 
 #   format so they change depending on value given in command line
 p.xlabel('Time') # add x axis label

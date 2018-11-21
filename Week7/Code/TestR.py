@@ -2,9 +2,10 @@
 # Date: Nov 2018
 
 """
+Example script to run an Rscript from python using subprocess module
 """ 
 
-__appname__ = '[  in python]'
+__appname__ = '[subprocess Rscript in python]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program" 

@@ -40,7 +40,10 @@ Thumbs.db
 
 ###python##
 *.pyc
-__pycache__/
+__pycache__/*
+
+#jupyernotebok
+.ipynb_checkpoints
 
 ## R ##
 .RData
@@ -48,7 +51,8 @@ __pycache__/
 .Rapp.history
 
 ### week
-Week6/
+MiniProject/
+
 
 # anyfile above 10mb
 ./Week5/Data/EU/g250_06.tif

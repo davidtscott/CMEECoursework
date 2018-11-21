@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # Date: Nov 2018
 
-"""Example of timeit module in python. 
+"""
+Example of timeit module in python. 
 Imports modules from profileme and profileme2.
 """ 
 

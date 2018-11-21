@@ -6,6 +6,11 @@ Use the subprocess.os module to get list of files and  directories
 in ubuntu home directory. 
 """
 
+__appname__ = '[subprocess.os in python]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program" 
+
 # Hint: look in subprocess.os and/or subprocess.os.path and/or 
 # subprocess.os.walk for helpful functions
 

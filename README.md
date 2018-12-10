@@ -14,10 +14,10 @@ Repository contains an individual directory for each weeks coursework, each furt
 ├── Assesment
 ├── Week1                 Unix & Shell Scripting
 ├── Week2                 Biological Computing in Python-1
-├── Week3                 Biological Computing in R & Data Management Exploration and Visualisation in R 
-|── Week4                 Statistics
+├── Week3                 Biological Computing in R and Data Management Exploration & Visualisation in R 
+|── Week4                 Statistics in R
 ├── Week5                 GIS
-├── Week6                 Genomics
+├── Week6                 Genomics & Bioinformatics
 └── Week7                 Biological Computing in Python-2
     ├── Code
     ├── Data

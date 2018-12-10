@@ -28,11 +28,13 @@ birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
 # SAYS WHAT THE SCRIPT DOES AND WHO THE AUTHOR IS
 
 # for every tuple in object birds, print
-for tuple in birds:
-  print(tuple)
-  print("")
+# for tuple in birds:
+#   print(tuple)
+#   print("")
 
-# this prints each tuple seperately as opposed to
+birdlist = [print(i,"\n") for i in birds]
+
+# this prints each tuple seperately, seperated by blank line as opposed to
 # printing entire block as would happen just used 'birds' 
 
 # OR

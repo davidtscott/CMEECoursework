@@ -5,15 +5,21 @@
 # Description: A simple script to illustrate R input-output
 
 rm(list=ls()) # clears workspace
+graphics.off() # clears graphics
 
 # Run line by line and check inputs outputs to understand what is happening
 
-MyData <- read.csv("../Data/trees.csv", header = TRUE) # import with headers
+# import with headers
+MyData <- read.csv("../Data/trees.csv", header = TRUE) 
 
-write.csv(MyData, "../Results/MyData.csv") #write it out as a new file
+#write it out as a new file
+write.csv(MyData, "../Results/MyData.csv") 
 
-write.table(MyData[1,], file = "../Results/MyData.csv",append=TRUE) # Append to it 
+# Append to it 
+write.table(MyData[1,], file = "../Results/MyData.csv", append=TRUE, col.names = FALSE) 
 
-write.csv(MyData, "../Results/MyData.csv", row.names = TRUE) # write row names
+# write row names
+write.csv(MyData, "../Results/MyData.csv", row.names = TRUE) 
 
-write.table(MyData, "../Results/MyData.csv", col.names = FALSE) # ignore column names
+ # ignore column names
+write.table(MyData, "../Results/MyData.csv", col.names = FALSE) 

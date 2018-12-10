@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
+# Date: October 2018
 
 """Extracts tuples from a tuple of tuples of rainfal data."""
 
-__appname__ = '[]'
+__appname__ = '[lc2.py]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"
@@ -38,8 +39,8 @@ rainfall = (('JAN',111.4),
 
 rainfall_big = [item for item in rainfall if item[1] > 100.0]
 # creates an object called rainfall_big.
-# assigns every item (month, rain tuple) to rainfall_big with a rainfall (index[1]) 
-#   above 100.0 
+# assigns every item (month, rain tuple) to rainfall_big with a 
+#   rainfall (index[1]) above 100.0 
 print(rainfall_big)
 # prints object (list of tuples)
 
@@ -48,8 +49,8 @@ print(rainfall_big)
 
 rainfall_small = [item[0] for item in rainfall if item[1] < 50.0]
 # creates a list object called rainfall_small.
-# assigns every item[0] (month name) to rainfall_small with a rainfall (index[1]) 
-#   below 50mm
+# assigns every item[0] (month name) to rainfall_small with a 
+#  rainfall (index[1]) below 50mm
 print(rainfall_small)
 # print object (list of months name)
 
@@ -60,26 +61,24 @@ print(rainfall_small)
 # here used 'rain' instead of 'item' as above. same principle
 # both rain and item represent each tuple in rainfall. can use anyterm.
 
-rainfall_b = set()
-# created a set called rainfall_b to be fed from the loop
+rainfall_b = [] 
+rainfall_s = []
+# created lists to be fed from the loop
+
 for rain in rainfall:
 # for each rain (tuple) in ranfall
     if rain[1] > 100.0:
         #if index 1 (rainfall) of tuple measures over 100.0
-        rainfall_b.add(rain)
-        #add the tuple (rain) to new set rainfall_.b
-print(rainfall_b)
-# prints contetn of rainfall_b only containing tuples with a rainfall > 100.0
-
-# here same again but with slight change 
-rainfall_s = set()
-for rain in rainfall:
-    if rain[1] < 50.0:
+        rainfall_b.append(rain)
+        #append the tuple (rain) to new set rainfall_.b
+    elif rain[1] < 50.0:
         # selected tuples with rainfall (index 1) below 50.0 
-        rainfall_s.add(rain[0])
-        # only added the month name to new object rainfall_s
+        rainfall_s.append(rain[0])
+        # only appended the month name to new object rainfall_s
+
+#prints content of lists
+print(rainfall_b)
 print(rainfall_s)
-#prints content
 
 # ANNOTATE WHAT EVERY BLOCK OR IF NECESSARY, LINE IS DOING! 
 

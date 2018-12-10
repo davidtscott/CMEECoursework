@@ -5,6 +5,7 @@
 # Description: Example of control flow constructs in R
 
 rm(list=ls()) # clears workspace
+graphics.off() # clears graphics
 
 ## Some code exemplifying control flow constructs in R
 

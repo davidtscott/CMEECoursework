@@ -1,12 +1,14 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
+# October 2018
 
-"""Some functions exemplifying the use of control statements"""
+""" Some functions exemplifying the use of control statements. """
 
 __appname__ = '[test_control_flow]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __license__ = "License for this code/program" 
 __version__ = '0.0.1'
 
+## imports ##
 import sys
 import doctest # Import the doctest module
 

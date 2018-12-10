@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-# Author: David Scott David.Scott18@imperial.ac.uk
 # Date: Oct 2018
 
 """basic boiler plate example, using sys module """ 
 
-__appname__ = '[python boilet plate example]'
+__appname__ = '[python_boiletplate]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program" 
 
 ## imports ##
-import sys # module to interface our program with the operating system 
+import sys 
+# module to interface our program with the operating system 
 
 ## Constants ##
 

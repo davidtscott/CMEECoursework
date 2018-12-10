@@ -23,7 +23,8 @@ grep -v E.coli ../Data/fasta/E.coli.fasta
 # (grep -v) invert match for excluding specific string (E.coli), from specific file path 
 #    (../Data/fasta/E.coli.fasta)
 
-# ALTERANTIVE tail -n+2 could be used if unable to access file and view it. i.e you just knew you had to start from line 2. This can be used in every subsequent command. 
+# ALTERANTIVE tail -n+2 could be used if unable to access file and view it. 
+#   i.e you just knew you had to start from line 2. This can be used in every subsequent command. 
 
 
 ##############  3  ################

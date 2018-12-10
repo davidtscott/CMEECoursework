@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
+# Date: Octber 2018
 
 """DNA sequence alignment, improved version""" 
-__appname__ = '[sequence alignment improved]'
+
+__appname__ = '[align_seqs_better]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"
@@ -20,6 +22,7 @@ see '../Results/align_seqs_better.txt'
 seq2 = "ATCGCCGGATTACGGG"
 seq1 = "CAATTCGGAT"
 
+## imports ##
 import csv
 
 # assign the longest sequence s1, and the shortest to s2
@@ -39,6 +42,9 @@ else:
 # by returning the number of matches 
 # starting from arbitrary startpoint
 def calculate_score(s1, s2, l1, l2, startpoint):
+    """ Computes score of two DNA sequences aligned.
+    startes from arbiary startpoint. returns number 
+    of matches """
     # startpoint is the point at which we want to start
     matched = "" # contains string for alignement
     score = 0
@@ -68,15 +74,14 @@ calculate_score(s1, s2, l1, l2, 5)
 # now try to find the best match (highest score)
 my_best_align = None
 my_best_score = -1
-best_ids = []
+best_ids = []     # creates emty list to store all best scores
 for i in range(l1):
     z = calculate_score(s1, s2, l1, l2, i)  # function above
     g = open('../Results/align_seqs_better.txt','wb') #wb = writing binary. 
     #data written in the form of byte objects
     if z > my_best_score:       # if new score calculated(z) is greater than previous one
         my_best_align = "." * i + s2 #creates new best align
-        my_best_score = z       # updates best score
-        best_ids = []           # creates emty list to store all best scores
+        my_best_score = z       # updates best score         
         best_ids.append(i)      # adds new one to it
     elif z == my_best_score:    # or if its equals old best score
         best_ids.append(i)      # also add to list of all best scores

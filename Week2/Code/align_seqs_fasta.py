@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
+# Date: October 2018
 
-""" ALigns two fasta sequences. """
+""" Aligns any two fasta sequences from seperate files """
 
-__appname__ = '[fasta alignment]'
+__appname__ = '[align_seqs_fasta.py]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"
@@ -17,11 +18,17 @@ for default files see:
 
 """ 
 
-
+## imports ##
 import sys 
 import csv 
 
+## functions ##
+
 def fasta_input(fastafile):
+    """ Read DNA seq from .fasta file, skips header
+    and returns the sequence as a string by removing end line character.
+    module designed so not to have to replicate code for each file input.
+     """
     with open(fastafile, 'r') as f1: #'with' closes the file automatically
         f1str = "" #creates blank string
         counter = 0 #counter, starts at 0 
@@ -30,14 +37,13 @@ def fasta_input(fastafile):
                 f1str += line.replace("\n", "") # if not, so this
             counter += 1
     return f1str  # closes off function
-    # reads data from file, skips header and converts it into 
-    #        one string by removing end line characters.
-    # module designed so not to have to replicate code for each file input. 
 
-# function that computes a score
-# by returning the number of matches 
-# starting from arbitrary startpoint
+
 def calculate_score(s1, s2, l1, l2, startpoint):
+    """ Computes score of two DNA sequences aligned.
+    startes from arbiary startpoint. Returns number 
+    of matches.
+    """
     # startpoint is the point at which we want to start
     matched = "" # contains string for alignement
     score = 0
@@ -52,11 +58,11 @@ def calculate_score(s1, s2, l1, l2, startpoint):
                 matched = matched + "-"
 
     # build some formatted output
-    print("." * startpoint + matched)        
-    print("." * startpoint + s2) 
-    print(s1)
-    print(score) 
-    print("")
+    #print("." * startpoint + matched)        
+    #print("." * startpoint + s2) 
+    #print(s1)
+    #print(score) 
+    #print("")
 
     return score
 
@@ -64,8 +70,8 @@ def calculate_score(s1, s2, l1, l2, startpoint):
 def main(argv):
     """ takes input from command line or defaults to two fasta files mapped,
     assigns them to two variables. Checks length of sequences. 
-    assigns the longer sequence to s1 variable and shorter to s2 variable. """
-# if three or more argv variables in command line (includes module)
+    assigns the longer sequence to s1 variable and shorter to s2 variable."""
+    # if three or more argv variables in command line (includes module)
     if len(argv) >= 3:  
         # assign the first file (variable [1]) to seq1
         seq1 = fasta_input(sys.argv[1])
@@ -83,7 +89,7 @@ def main(argv):
     if l1 >= l2:    # if l1 (seq1) is longer than l2 (seq2)
         s1 = seq1   
         s2 = seq2   
-    else:         # assigns the longest sequense as s1 and the shorter as s2
+    else:    # assigns the longest sequense as s1 and the shorter as s2
         s1 = seq2   
         s2 = seq1
         l1, l2 = l2, l1 # swap the two lengths
@@ -106,9 +112,11 @@ def main(argv):
     print(s1)
     print("Best score:", my_best_score)
 
-    g = open('../Results/align_seqs_fasta.csv','w')
-    output = csv.writer(g)
-    output.writerow(["Best score:", my_best_score])
+    # save output to .txt file 
+    with open('../Results/align_seqs_fasta.txt','w') as outfile:
+        outfile.write("My Best Score: {}\n".format(my_best_score)) 
+        outfile.write("My Best Alignment: \n{}".format(my_best_align)) 
+
 
 if __name__ == "__main__":
     status = main(sys.argv)

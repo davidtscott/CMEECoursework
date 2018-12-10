@@ -7,45 +7,43 @@
 rm(list = ls()) # clears workspace
 graphics.off() # closes all open graphics
 
-## Packages 
+## Packages ##
 library(lattice)
 library(plyr)
 library(dplyr)
 require(tidyr)
 
-#load data
+## load data
 MyDF <- read.csv("../Data/EcolArchives-E089-51-D1.csv")
 
-#examie dataframe
-dim(MyDF)
-str(MyDF)
-head(MyDF)
-names(MyDF)
+## examine dataframe
+# dim(MyDF)
+# str(MyDF)
+# head(MyDF)
+# names(MyDF)
 
 ## draws and saves three lattic graphs by feding interaction type
 # use of log of masses (or mass-ratios) for all three
 
-# predator mass.   Pred_Lattice.pdf
-pdf("../Results/Pred_Lattice.pdf", # Open blank pdf page using a relative path
-    11.7, 8.3) # These numbers are page dimensions in inches
-densityplot(~log(Predator.mass) | Type.of.feeding.interaction, data=MyDF, 
-            main= "Density Plot by Feeding Interaction Type", xlab="Log Predator Mass (g)",
-           col = "purple", scales=list(cex=1.2, col="red"))
-graphics.off()
+## predator mass:   Pred_Lattice.pdf
+pdf("../Results/Pred_Lattice.pdf") #11.7, 8.3) 
+# Open blank pdf page using a relative path and specifies page dimensions in inches
+print(densityplot(~log(Predator.mass) | Type.of.feeding.interaction, data=MyDF, 
+    xlab="Log Predator Mass (g)", main="Density Plot by Feeding Interaction Type", col="purple"))
+dev.off()         
 
-# prey mass.      Prey_Lattice.pdf
-pdf("../Results/Prey_Lattice.pdf", 11.7, 8.3) 
-densityplot(~log(Prey.mass) | Type.of.feeding.interaction, data=MyDF,
-            main= "Density Plot by Feeding Interaction Type", xlab="Log Prey Mass (g)",
-            col = "purple", scales=list(cex=1.2, col="red"))
-graphics.off() 
+## prey mass:      Prey_Lattice.pdf
+pdf("../Results/Prey_Lattice.pdf") # 11.7, 8.3) 
+print(densityplot(~log(Prey.mass) | Type.of.feeding.interaction, data=MyDF,
+    main= "Density Plot by Feeding Interaction Type", xlab="Log Prey Mass (g)", col="purple"))
+     # scales=list(cex=1.2, col="red")
+dev.off() 
 
-# size ratio of predator mass over prey mass.   SizeRatio_Lattice.pdf
-pdf("../Results/SizeRatio_Lattice.pdf",  11.7, 8.3) 
-  densityplot(~(log(Predator.mass/Prey.mass)) | Type.of.feeding.interaction, data=MyDF,
-            main= "Density Plot by Feeding Interaction Type", xlab="Log Pred/Prey Size Ratio (g)",
-            col = "purple", scales=list(cex=1.2, col="red"))
-graphics.off()
+## size ratio of predator mass over prey mass:   SizeRatio_Lattice.pdf
+pdf("../Results/SizeRatio_Lattice.pdf") # 11.7, 8.3) 
+print(densityplot(~(log(Predator.mass/Prey.mass)) | Type.of.feeding.interaction, data=MyDF,
+    main= "Density Plot by Feeding Interaction Type", xlab="Log Pred/Prey Size Ratio (g)", col="purple"))
+dev.off()
 
 # Calculated mean and meadian log pred mass, prey mass, and pred prey size ratio, by feeding type
 
@@ -72,9 +70,6 @@ LogRatio <- join(LogRatioMean, LogRatioMedian, type ="inner")
 
 # join previous two joined with that fo ration. Created final dataframe
 LogDF <- join(LogPredPrey, LogRatio, type ="inner")
-print(LogDF)
+#print(LogDF)
 # output results to a csv
 write.csv(LogDF, "../Results/PP_Results.csv", row.names = FALSE)
-
-
-

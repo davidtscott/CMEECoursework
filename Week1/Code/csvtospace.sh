@@ -11,4 +11,3 @@ file="${1//.csv/}"                       #removes the .csv extension of variable
 cat $1 | tr "," " " >> $file.txt 	# Reads content of variable 1 as an output, piped, then translates occurances 				# of commas to space and appends content to a new .txt version without the csv extension ($1).
 echo "Done!" 					# Prints "Done!" when complete
 exit 
-

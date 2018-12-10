@@ -19,7 +19,8 @@ import sys # module to interface our program with the operating system
 def even_or_odd(x=0): #if not specified, x should take value 0.
     """Find whether a number x is even or odd."""
     if x % 2 == 0: #The conditional if # % here determines even or odd
-        return "%d is Even!" % x #%d is how to format print number. can be %s etc. % x tells what number to use 
+        return "%d is Even!" % x 
+    #%d is how to format print number. can be %s etc. % x the number to use 
     return "%d is Odd!" % x
 
 def largest_divisor_five(x=120):
@@ -34,15 +35,16 @@ def largest_divisor_five(x=120):
     elif x % 2 == 0: 
         largest = 2
     else: #When all other (if, elif) conditions are not met
-        return "No divisor found for %d!" % x #Each function can return a value or a variable.
+        return "No divisor found for %d!" % x 
+        #Each function can return a value or a variable.
     return "The largest divisor of %d is %d" % (x, largest)
 
 def is_prime(x=70):
     """Find whether an integer is prime."""
     for i in range(2, x): # "range" returns a sequence of integers
         if x % i == 0: 
-            print("%d is not a prime: %d is a divisor" % (x, i)) #Print formatted text "%d %s %f %e" % (20,"30",0.0003,0.00003)
-
+            print("%d is not a prime: %d is a divisor" % (x, i)) 
+            #Print formatted text "%d %s %f %e" % (20,"30",0.0003,0.00003)
             return False 
     print("%d is a prime!" % x)
     return True 

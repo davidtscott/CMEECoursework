@@ -7,10 +7,11 @@
 rm(list = ls()) 
 graphics.off() 
 
-#packages
+## packages##
 library(ggplot2)
 
-build_ellipse <- function(hradius, vradius){ # function that returns an ellipse
+# function that returns an ellipse
+build_ellipse <- function(hradius, vradius){ 
   npoints = 250
   a <- seq(0, 2 * pi, length = npoints + 1)
   x <- hradius * cos(a)
@@ -18,26 +19,30 @@ build_ellipse <- function(hradius, vradius){ # function that returns an ellipse
   return(data.frame(x = x, y = y))
 }
 
-N <- 250 # Assign size of the matrix
+# Assign size of the matrix
+N <- 250 
 
-M <- matrix(rnorm(N * N), N, N) # Build the matrix
+# Build the matrix
+M <- matrix(rnorm(N * N), N, N) 
 
-eigvals <- eigen(M)$values # Find the eigenvalues
+# Find the eigenvalues
+eigvals <- eigen(M)$values 
 
-eigDF <- data.frame("Real" = Re(eigvals), "Imaginary" = Im(eigvals)) # Build a dataframe
+# Build a dataframe
+eigDF <- data.frame("Real" = Re(eigvals), "Imaginary" = Im(eigvals)) 
 
-my_radius <- sqrt(N) # The radius of the circle is sqrt(N)
+# The radius of the circle is sqrt(N)
+my_radius <- sqrt(N) 
 
-ellDF <- build_ellipse(my_radius, my_radius) # Dataframe to plot the ellipse
+# Dataframe to plot the ellipse
+ellDF <- build_ellipse(my_radius, my_radius) 
 
-names(ellDF) <- c("Real", "Imaginary") # rename the columns
-
+# rename the columns
+names(ellDF) <- c("Real", "Imaginary") 
 
 # Plot the eigenvalues
 p <- ggplot(eigDF, aes(x = Real, y = Imaginary))
-p <- p +
-  geom_point(shape = I(3)) +
-  theme(legend.position = "none")
+p <- p + geom_point(shape = I(3)) + theme(legend.position = "none")
 
 # Add the vertical and horizontal line
 p <- p + geom_hline(aes(yintercept = 0))
@@ -46,7 +51,7 @@ p <- p + geom_vline(aes(xintercept = 0))
 # Add the ellipse
 p <- p + geom_polygon(data = ellDF, aes(x = Real, y = Imaginary, alpha = 1/20, fill = "red"))
 
-# Save as pdf 
-pdf("../Results/Girko.pdf") # Open blank pdf page using a relative path
+# Save as pdf, Open blank pdf page using a relative path
+pdf("../Results/Girko.pdf") 
 print(p)
 graphics.off() 

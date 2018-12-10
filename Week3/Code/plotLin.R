@@ -7,7 +7,7 @@
 rm(list = ls()) 
 graphics.off() 
 
-#packages
+## packages ##
 library(ggplot2)
 
 # create data

@@ -7,7 +7,7 @@
 rm(list = ls()) #clears workspaces
 graphics.off() #clears any images
 
-## Packages
+## Packages ##
 library(ggplot2)
 library(plyr)
 library(dplyr)
@@ -34,7 +34,7 @@ p <- p + theme_bw() + theme(legend.position = "bottom") + guides(colour = guide_
 # Open blank pdf page using a relative path
 pdf("../Results/PP_Regress.pdf", 11.7, 8.3)
 print(p)
-
+dev.off()
 #calculate reg results for fitted lines in each subset of data 
 #fitted_models <- MyDF %>% group_by(Type.of.feeding.interaction, Predator.lifestage) %>% do(model = lm(Predator.mass ~ Prey.mass, data = .))
 

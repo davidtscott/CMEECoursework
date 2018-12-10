@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
+# Date: October 2018 
 
 """DNA sequence alignment"""
-__appname__ = '[sequence alignment]'
+
+__appname__ = '[align_seqs.py]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"
@@ -22,17 +24,19 @@ Author: David Scott (david.scott18@imperial.ac.uk)
 #seq2 = "ATCGCCGGATTACGGG"
 #seq1 = "CAATTCGGAT"
 
+## imports ##
 import csv 
 
+# read in data from csv file
 with open('../Data/align_seqs.csv', 'r') as csvfile:
     DNAseqs = csv.reader(csvfile)
     for row in DNAseqs:
         seq1 = row[0]
         seq2 = row[1]
 
+
 # assign the longest sequence s1, and the shortest to s2
 # l1 is the length of the longest, l2 that of the shortest
-
 l1 = len(seq1)
 l2 = len(seq2)
 if l1 >= l2:
@@ -47,6 +51,9 @@ else:
 # by returning the number of matches 
 # starting from arbitrary startpoint
 def calculate_score(s1, s2, l1, l2, startpoint):
+    """ Computes score of two DNA sequences aligned.
+    startes from arbiary startpoint. returns number 
+    of matches """
     # startpoint is the point at which we want to start
     matched = "" # contains string for alignement
     score = 0
@@ -69,6 +76,7 @@ def calculate_score(s1, s2, l1, l2, startpoint):
 
     return score
 
+# calls function with arbitary start points
 calculate_score(s1, s2, l1, l2, 0)
 calculate_score(s1, s2, l1, l2, 1)
 calculate_score(s1, s2, l1, l2, 5)
@@ -87,8 +95,6 @@ print(my_best_align)
 print(s1)
 print("Best score:", my_best_score)
 
-with open('../Results/align_seqs.csv','w') as g:
-    output = csv.writer(g)
-    output.writerow([my_best_align])
-    output.writerow([s1])
-    output.writerow([my_best_score])
+with open('../Results/align_seqs.txt','w') as outfile:
+    outfile.write("My Best Score: {}\n".format(my_best_score)) 
+    outfile.write("My Best Alignment: {}".format(my_best_align))   

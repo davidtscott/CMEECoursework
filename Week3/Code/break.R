@@ -2,9 +2,10 @@
 # Author: David Scott
 # Contact: david.scott18@imperial.ac.uk
 # Date:  October 24 2018
-# Description: use of break in functions
+# Description: Use of break in functions
 
 rm(list=ls()) # clears workspace
+graphics.off() # clears graphics
 
 i <- 0 #initialize i
   while(i < Inf) {

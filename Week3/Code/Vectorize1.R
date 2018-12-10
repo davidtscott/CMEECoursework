@@ -5,7 +5,9 @@
 # Description: sums all elements of a matrix 
 
 rm(list=ls()) # clears workspace
+graphics.off() # clears graphics
 
+# creates matix of uniform distribution 
 M <- matrix(runif(1000000),1000,1000)
 
 SumAllElements <- function(M){
@@ -20,8 +22,11 @@ SumAllElements <- function(M){
 }
 
 ## This on my computer takes about 1 sec
+print("Speed of SumAllElements function defined using loops:")
 print(system.time(SumAllElements(M)))
+
 ## While this takes about 0.01 sec
+print("Speed of sum function without loops:")
 print(system.time(sum(M)))
 
 #system.time function calculates time taken by code

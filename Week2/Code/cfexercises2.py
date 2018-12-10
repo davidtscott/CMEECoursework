@@ -1,37 +1,38 @@
 #!/usr/bin/env python3
+# Date: October 2018
 
-""" Six functions to show the use of modules for 
+""" 
+Six functions to show the use of modules for 
 manipulation and calculation of variables
 """ 
 
-__appname__ = '[control flow exercise 2]'
+__appname__ = '[cfexercises2.py]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"
 
-"""Main arguemnt prints results of each function 
+"""
+Main argument prints results of each function 
 using a default input value, to test functionality. 
 
 Uses loops for factorial calculations. 
 
-Take input from command line.
-
-All code is annotated within the script.
-
-Author: David Scott (david.scott18@imperial.ac.uk)
-
+Takes input from command line.
 """ 
 
 #### Modified script and made it a module. 
 #### All functions take arguements from the command line.
-#### Added test arguements, running it will output from each function to show they work.
+#### Added test arguements, to output from each function to show they work.
 
 
-#### imports ####
+## imports ##
 import sys
+
+## constants ##
 
 
 #### functions ####
+
 def foo_1(x):
     """exponent, x to the power of 0.5"""
     #return x ** 0.5 #exponent, x to the power of 0.5 
@@ -67,7 +68,6 @@ def foo_5(x): # a recursive function
     if x == 1:
         return 1
     return x * foo_5(x - 1) #!x factorial of x 
-    #return "By process of recurions, %d is the factorial of %d" % (x * foo_5(x - 1), x)
 
 def foo_6(x): #calculate the factorial of x in a different way
     """calculates factorial of x"""
@@ -80,7 +80,7 @@ def foo_6(x): #calculate the factorial of x in a different way
 def main(argv):
     """Prints results of each function with a default numeric input,
     from foo_1() to foo_6() in numeric order. 
-    Default value used: foo_1(8), 2(5, 15), 3(20, 10, 5), 4(5), 5(7), 6(8). """
+    Default value used: foo_1(8), 2(5, 15), 3(20, 10, 5), 4(5), 5(7), 6(8)."""
     print(foo_1(8))
     print(foo_2(5, 15))
     print(foo_3(20, 10, 5))

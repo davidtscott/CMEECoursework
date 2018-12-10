@@ -5,6 +5,7 @@
 # Description: Wrangling data with base R and reshape2 package
 
 rm(list=ls()) # clears workspace
+graphics.off() # clear graphics
 
 ################################################################
 ################## Wrangling the Pound Hill Dataset ############

@@ -2,9 +2,13 @@
 # Author: David Scott
 # Contact: david.scott18@imperial.ac.uk
 # Date:  October 24 2018
-# Description: calculates tree heght using trigonmenric function. take input file from command line. outputs results to csv
+# Description: Calc. tree height: input file from command line, outputs to csv
 
 rm(list=ls()) # clears workspace
+graphics.off() # clears graphics
+
+## packages ##
+library(tools)
 
 args = commandArgs(trailingOnly=TRUE)
 # enables command line arguments
@@ -21,9 +25,10 @@ args = commandArgs(trailingOnly=TRUE)
 # OUTPUT
 # The heights of the tree, same units as "distance"
 
-# test if there is at least one argument given in command line: if not, return an error
+# test if there is at least one argument given in command line: 
+# if not, return an error
 if (length(args)==0) {
-  stop("At least one argument must be supplied (input file).n", call.=FALSE)
+  stop("At least one argument must be supplied (input file).", call.=FALSE)
 } 
 
 MyData <- read.csv(args[1], header = TRUE) # import with headers
@@ -35,11 +40,11 @@ MyData <- read.csv(args[1], header = TRUE) # import with headers
 TreeHeight <- function(degrees, distance){
   radians <- degrees * pi / 180
   height <- distance * tan(radians)
-  print(paste("Tree height is:", height))
+  #print(paste("Tree height is:", height))
   return (height)
 }
 
-#creates a data frome (TreeDF) with data from MyData (imported at beginning from trees.csv)
+#creates a data frome (TreeDF) with data from MyData 
 # and calls function TreeHeight defined above
 # calls it with MyData column 3 (degrees) and MyData column 2 (distance)
 # and thus appends output of function from two inputs with MyData
@@ -47,11 +52,12 @@ TreeDF <- data.frame(MyData, TreeHeight(MyData[3], MyData[2]))
 colnames(TreeDF)[4] <- "Tree.Height.m"
 # names column 4 containing output of function as "Tree.Height.m"
 
-library(tools)
+
+# strip extension and file path from file given as agrument one in command line
 inputfile_name <- file_path_sans_ext(basename(args[1]))
-# strips the extension and file path from file given as agrument one in command line
+# paste new file path , extension  together and assigns to variable
 outputfile_name <- paste("../Results/", inputfile_name, "_treeheights.csv", sep = "")
-# paste new file path , extension and addition to name together and assigns to variable
-print(outputfile_name)#prints new name of output file
+# saves dataframe (TreeDF) to file named above.
 write.csv(TreeDF, outputfile_name, row.names = FALSE)
-# saves dataframe (TreeDF) to file named above. 
+#prints new name of output file
+print(paste("Saved output to csv file:", outputfile_name))

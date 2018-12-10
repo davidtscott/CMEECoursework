@@ -2,9 +2,14 @@
 # Author: David Scott
 # Contact: david.scott18@imperial.ac.uk
 # Date:  October 24 2018
-# Description: data wrangling with tidyr and dplyr
+# Description: Data wrangling in R with tidyr and dplyr
 
 rm(list=ls()) # clears workspace
+graphics.off() # clears graphics
+
+## packages ##
+require(dplyr)
+require(tidyr)
 
 ################################################################
 ################## Wrangling the Pound Hill Dataset ############
@@ -22,9 +27,6 @@ MyData <- as.matrix(read.csv("../Data/PoundHillData.csv",header = F))
 MyMetaData <- read.csv("../Data/PoundHillMetaData.csv",header = T, sep=";", stringsAsFactors = F)
 
 ############# Inspect the dataset ###############
-
-require(dplyr)
-require(tidyr)
 
 #head(MyData) # prints first 6 rows and headers
 dplyr::tbl_df(MyData) #like head()
@@ -60,7 +62,7 @@ dplyr::tbl_df(TempData) #like head()
 require(reshape2) # load the reshape2 package
 
 #?melt #check out the melt function
-?gather #check out the gather function from tidyr package
+#?gather #check out the gather function from tidyr package
 
 #MyWrangledData <- melt(TempData, id=c("Cultivation", "Block", "Plot", "Quadrat"), variable.name = "Species", value.name = "Count")
 MyWrangledData <- TempData %>% tidyr::gather(., Species, count, -Cultivation, -Block, -Plot, -Quadrat) %>% mutate(Cultivation = as.factor(Cultivation), Block = as.factor(Block), Plot = as.factor(Plot), Quadrat = as.factor(Quadrat), count = as.integer(count))

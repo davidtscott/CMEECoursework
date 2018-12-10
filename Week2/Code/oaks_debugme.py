@@ -1,15 +1,10 @@
 #!/usr/bin/env python3
 # Date: October 2018
 
-"""Functions to detect and print oaks of genus 'Quercus'."""
+"""
+Functions to detect and print oaks of genus 'Quercus'.
 
-__appname__ = '[oaks_debugme]'
-__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
-__version__ = '0.0.1'
-__license__ = "License for this code/program"
-
-
-"""Dispays "FOUND AN OAK!" when oak species is detected.
+Dispays "FOUND AN OAK!" when oak species is detected.
 
 Bug fixed of previous version (spelling)
 
@@ -20,6 +15,13 @@ All code is annotated within the script.
 Author: David Scott (david.scott18@imperial.ac.uk)
 
 """ 
+
+__appname__ = '[oaks_debugme]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program"
+
+
 ## imports ##
 import csv
 import sys

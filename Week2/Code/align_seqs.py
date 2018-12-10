@@ -1,14 +1,6 @@
 #!/usr/bin/env python3
 # Date: October 2018 
 
-"""DNA sequence alignment"""
-
-__appname__ = '[align_seqs.py]'
-__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
-__version__ = '0.0.1'
-__license__ = "License for this code/program"
-
-
 """ Takes sequences as input from a single external file.
 see '../Data/align_seqs.csv'
 
@@ -19,6 +11,12 @@ All code is annotated within the script.
 
 Author: David Scott (david.scott18@imperial.ac.uk)
 """
+
+__appname__ = '[align_seqs.py]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program"
+
 
 # These are the two sequences to match
 #seq2 = "ATCGCCGGATTACGGG"

@@ -3,7 +3,7 @@
 
 """ simple debug example fucntion."""
 
-__appname__ = '[debug example function]'
+__appname__ = '[debugme.py]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"

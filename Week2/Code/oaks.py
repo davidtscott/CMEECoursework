@@ -3,7 +3,7 @@
 
 """Using loops in python to manipulate data.""" 
 
-__appname__ = '[oaks]'
+__appname__ = '[oaks.py]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program" 
@@ -18,6 +18,7 @@ taxa = [ 'Quercus robur',
         ]
 
 def is_an_oak(name):
+    """ return names is startd with 'quercus ' """
     return name.lower().startswith('quercus ')
 
 ##Using for loops 

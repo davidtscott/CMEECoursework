@@ -1,17 +1,10 @@
 #!/usr/bin/env python3
 # Date: October 2018
 
-""" 
-Six functions to show the use of modules for 
-manipulation and calculation of variables
-""" 
-
-__appname__ = '[cfexercises2.py]'
-__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
-__version__ = '0.0.1'
-__license__ = "License for this code/program"
-
 """
+Six functions to show the use of modules for 
+manipulation and calculation of variable
+
 Main argument prints results of each function 
 using a default input value, to test functionality. 
 
@@ -19,6 +12,13 @@ Uses loops for factorial calculations.
 
 Takes input from command line.
 """ 
+
+__appname__ = '[cfexercises2.py]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program"
+
+
 
 #### Modified script and made it a module. 
 #### All functions take arguements from the command line.

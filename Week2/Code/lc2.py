@@ -1,13 +1,6 @@
 #!/usr/bin/env python3
 # Date: October 2018
 
-"""Extracts tuples from a tuple of tuples of rainfal data."""
-
-__appname__ = '[lc2.py]'
-__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
-__version__ = '0.0.1'
-__license__ = "License for this code/program"
-
 """
 Completes two tasks (below), twice by using both list comprehension and loops
     1- creates a list of month, rainfall tuples where the rainfall 
@@ -16,6 +9,13 @@ Completes two tasks (below), twice by using both list comprehension and loops
     2- creates list of month names where the rainfall was below 50.0 mm
 
 """ 
+
+__appname__ = '[lc2.py]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program"
+
+
 
 
 # Average UK Rainfall (mm) for 1910 by month

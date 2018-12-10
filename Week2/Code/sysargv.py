@@ -3,7 +3,7 @@
 
 """basic boiler plate example, using sys module """ 
 
-__appname__ = '[sys example]'
+__appname__ = '[sysargv.py]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program" 

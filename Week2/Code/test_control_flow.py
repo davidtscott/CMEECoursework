@@ -3,7 +3,7 @@
 
 """ Some functions exemplifying the use of control statements. """
 
-__appname__ = '[test_control_flow]'
+__appname__ = '[test_control_flow.py]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __license__ = "License for this code/program" 
 __version__ = '0.0.1'
@@ -12,6 +12,7 @@ __version__ = '0.0.1'
 import sys
 import doctest # Import the doctest module
 
+## function ##
 def even_or_odd(x=0):
     """Find whether a number x is even or odd.
       
@@ -38,6 +39,7 @@ def even_or_odd(x=0):
 ####### I SUPPRESSED THIS BLOCK: WHY? #######
 
 def main(argv): 
+    """ Call even_or_odd function defined """
     print(even_or_odd(22))
     print(even_or_odd(33))
     return 0

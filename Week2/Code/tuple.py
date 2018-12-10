@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
+# Date: October 2018
 
-"""Extracts tuples from within a tuple and outputs as seperate lines
+"""
+Extracts tuples from within a tuple and outputs as seperate lines
 
 """ 
 
-__appname__ = '[tuple]'
+__appname__ = '[tuple.py]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"

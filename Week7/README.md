@@ -2,7 +2,7 @@
 ## Author: David Scott - _david.scott18@imperial.ac.uk_
 ## Date: _NOV - 2018_
 
-### Description: [Biological COmputing in Python 2. All scripts were written in visual studio code for python3 or Rstudio for R. Scripts stored in code directory and use relative paths to call data from Data and direct outputs to Results.]
+### Description: [Biological Computing in Python 2. All scripts were written in visual studio code for python3 or Rstudio for R. Scripts stored in code directory and use relative paths to call data from Data and direct outputs to Results.]
 
 ### Map of directories with short description of each script. 
 ```

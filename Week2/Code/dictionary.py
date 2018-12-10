@@ -1,14 +1,6 @@
 #!/usr/bin/env python3
 # Date: October 2018
 
-"""Populates a dictionary from a list of tuples (Species name, Order)
-"""
-
-__appname__ = '[taxa_dic]'
-__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
-__version__ = '0.0.1'
-__license__ = "License for this code/program"
-
 """
 Uses order as key and species names as values. 
 
@@ -22,6 +14,11 @@ To use, run script, write taxa_dic['Carnivora'] into command line.
 Includes orders Chiroptera, Rodentia, Afrosoricida, Carnivora.
 
 """ 
+
+__appname__ = '[dictionary.py]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program"
 
 
 taxa = [ ('Myotis lucifugus','Chiroptera'),

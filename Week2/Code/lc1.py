@@ -1,13 +1,6 @@
 #!/usr/bin/env python3
 # Date: October 2018
 
-"""Three list comprehensions and three loops on a tuple of tuples."""
-
-__appname__ = '[lc1.py]'
-__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
-__version__ = '0.0.1'
-__license__ = "License for this code/program"
-
 """
 Object birds contains a tuple of tuples. Each tuple has the latin name,
 common name and body mass of a bird species. 
@@ -21,6 +14,11 @@ it to a new list object. The second takes common name, index [1]
 and the third takes the body mass index [2]. 
 
 """ 
+
+__appname__ = '[lc1.py]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program"
 
 
 birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),

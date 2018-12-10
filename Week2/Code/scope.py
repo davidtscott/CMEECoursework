@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
+# Date: October 2018
 
 """example to show global variables """ 
 
-__appname__ = '[global variables]'
+__appname__ = '[scope.py]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program" 

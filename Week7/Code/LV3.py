@@ -20,7 +20,7 @@ it uses default values: r = 1., a = 0.1, z = 1.5, e = 0.75
 prints final non-zero value on screen.
 """ 
 
-__appname__ = '[numerical integration in python]'
+__appname__ = '[LV3.py]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program" 

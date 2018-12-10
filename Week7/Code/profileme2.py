@@ -3,7 +3,7 @@
 
 """Second example of profiling functions in python""" 
 
-__appname__ = '[profiling functions in python 2]'
+__appname__ = '[profileme2.py'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program" 

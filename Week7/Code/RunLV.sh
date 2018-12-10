@@ -3,7 +3,7 @@
 # Scrit: RunLV.sh
 # Desc: Runs three scipts, LV1.py LV2.py and LV3.py and checks speed
 # Arguements:  
-# Date:
+# Date: Nov 2018
 
 divider===============================
 divider=$divider$divider

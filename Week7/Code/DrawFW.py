@@ -5,7 +5,7 @@
 Creates and plots a synthetic food web network
 """ 
 
-__appname__ = '[food web networks in python]'
+__appname__ = '[DrawFW.py]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program" 
@@ -46,7 +46,7 @@ SizRan = ([-10,10]) # log10 scale
 Sizs = sc.random.uniform(SizRan[0],SizRan[1],MaxN)
 Sizs 
 
-## visualise distribution 
+## visualise distribution size
 p.hist(Sizs) #log10 scale
 p.show()
 
@@ -71,6 +71,6 @@ NodSizs = 1000 * (Sizs - min(Sizs))/(max(Sizs)-min(Sizs))
 
 # plot and save graph
 f = p.figure()
-nx.draw_networkx(G, pos, node_size = NodSizs)
+nx.draw_networkx(G, pos, node_size = NodSizs) 
 p.show(f)
 f.savefig("../Results/DrawFW.pdf")

@@ -1,4 +1,12 @@
 #!/usr/bin/env Rscript
+# Author: David Scott
+# Contact: david.scott18@imperial.ac.uk
+# Date:  November 2018
+# Description: Plots data and outputs list of species to csv
+
+## packages ##
+rm(list = ls()) 
+graphics.off() 
 
 # Plots log(field metabolic rate) against log(body mass) for the Nagy et al 
 # 1999 dataset to a file fmr.pdf.

@@ -13,13 +13,12 @@ decode data to ASCII
 Prints and formas output to the screen. 
 """
 
-
-__appname__ = '[regex in python]'
+__appname__ = '[blackbirds.py]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program" 
 
-##packages 
+## imports ## 
 import re
 
 # Read the file

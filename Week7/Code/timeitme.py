@@ -6,7 +6,7 @@ Example of timeit module in python.
 Imports modules from profileme and profileme2.
 """ 
 
-__appname__ = '[profiling with timeit in python]'
+__appname__ = '[timeitme.py]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program" 

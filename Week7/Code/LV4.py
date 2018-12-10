@@ -23,7 +23,7 @@ Further edited with a random gaussian fluctuation in resources
 growth rate at each time step. 
 """ 
 
-__appname__ = '[LV4: numerical integration in python]'
+__appname__ = '[LV4.py]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program" 

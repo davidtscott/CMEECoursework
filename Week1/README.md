@@ -1,6 +1,6 @@
 # README Document for CMEECourseWork Week1
 ## Author: David Scott - _david.scott18@imperial.ac.uk_
-## Date: _Dec - 2018_
+## Date: _OCT - 2018_
 
 ### Description: [All files created using Ubunto Linux distribution, LaTex and bibtex as part of CMEE Week1. All code, data and results contained in their respective directories. A map of all directories and files is provded below. Scripts either call from data directory or are written with a variable, in such a case use command line: bash SCRIPTNAME.sh ../Data/FILENAME.]
 

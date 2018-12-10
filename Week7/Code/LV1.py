@@ -2,7 +2,7 @@
 # Date: Nov 2018
 
 """
-Lotka Volterra numerical integration model
+Lotka-Volterra numerical integration model, generates two figures.
 """
 
 """
@@ -12,19 +12,19 @@ for predator prey relationship in two dimensional space.
 Prints two graphs to the ../Results directory
 """ 
 
-__appname__ = '[numerical integration (L-V) in python]'
+__appname__ = '[LV1.py]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program" 
 
 # example of numerical integration using lotka-volterra model
 
-# packages ###
+## imports ###
 import scipy as sc 
 import scipy.integrate as integrate 
 import matplotlib.pylab as p
 
-
+## functions ##
 def dCR_dt(pops, t=0): # t=0 is the default value, so can run without input
     """Lotka-Volterra pred-prey model"""
     R = pops[0]  # resource (prey)

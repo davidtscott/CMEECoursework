@@ -2,7 +2,7 @@
 # Date: Nov 2018
 
 """
-L-V model, takes parameter values from command line 
+L-V model, takes parameter values from command line. Has defaults also.  
 """
 
 """
@@ -21,12 +21,12 @@ density dependence.
 prints final non-zero value on screen.
 """ 
 
-__appname__ = '[numerical integration in python]'
+__appname__ = '[LV2.py]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program" 
 
-# example of numerical integration using lotka-volterra model
+# Example of numerical integration using lotka-volterra model
 
 ### Packages ###
 import scipy as sc 

@@ -2,9 +2,12 @@
 ## Author: David Scott- _david.scott18@imperial.ac.uk_
 ## Date: _Nov - 2018_
 
-### Description: [Directory for Week4 of CMEE coursework. Introductory week to statistics in the R environment. No scripts were required to be saved and no assesment was included. Thus data was gitignored. Data available on request.]
+### Statistics in R
 
-### Tree map
+#### Description: 
+Introductory week to statistics in the R environment. No scripts were required to be saved and no assesment was included. Thus data was gitignored. Data available on request.
+
+#### Tree map
 ```
 .
 ├── Code

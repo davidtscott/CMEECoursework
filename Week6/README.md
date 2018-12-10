@@ -2,9 +2,12 @@
 ## Author: David Scott - _david.scott18@imperial.ac.uk_
 ## Date: _Nov - 2018_
 
-### Description: CMEE coursework for Week6 - Genomics and Bioinformatics. No scripts were made. Directory includes data used.
+### Genomics and Bioinformatics
 
-### Tree map
+#### Description: 
+No scripts were made. Directory includes data used.
+
+#### Tree map
 ```
 .
 ├── Code

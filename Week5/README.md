@@ -2,13 +2,16 @@
 ## Author: David Scott- _david.scott18@imperial.ac.uk_
 ## Date: _Nov - 2018_
 
-### Description: [CMEE coursework for Week5, introduction to spatial data analysis. All work was done using QGIS oen source software. gitignored all files above 10mb in size, available on request.]
+### GIS
 
-### Tree map
+#### Description: 
+Introduction to spatial data analysis. All work was done using **QGIS** oen source software. gitignored all files above 10mb in size, available on request.
+
+#### Tree map
 ```
 .
 ├── Code
-│   └── QGIS_Prac1.py : Script to convert bioclim temperature and rainfall data and CORINE landcover files into a shared projection and resolution (BNG 2km grid) and then extract mean climatic values within land cover classes  Code is PEP8 compliant: https://www.python.org/dev/peps/pep-0008
+│   └── QGIS_Prac1.py : Script to convert  files into a shared projection and resolution and extract mean climatic values within land cover classes. 
 ├── Data
 │   ├── Borneo
 │   │   ├── MODIS_blue_reflectance.tif            .gitignored

@@ -1,6 +1,6 @@
 # README Document for CMEECourseWork Repository
 ## Author: David Scott - _david.scott18@imperial.ac.uk_
-## Date: _DEC - 2018_
+## Date: _OCT - DEC - 2018_
 
 ### Description: [Repository contains an individual directory for each weeks coursework, each further subdivided into four sub-directories; Code, Data, Results and Sandbox. Set working directory to Code. All scripts call data and output results to respective directories using relative paths. All scipts are annotated where appropriate.]
 

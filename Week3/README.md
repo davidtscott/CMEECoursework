@@ -33,7 +33,6 @@
 │   ├── run_get_TreeHeight.sh :                       Runs R and python3 scripts (both cal. tree height) '
 │   ├── Run_Vectorize.sh :                            Compares speed of functions with and without vectorization(R & Python) '
 │   ├── sample.R :                                    Run a simulation that involves sampling from a population '
-│   ├── TAutoCorr.log                               .gitignored
 │   ├── TAutoCorr.R :                                 Calculates autocorrelation of time series mean temperature data '
 │   ├── TAutoCorr.tex :                               Time Series Autocorrelation of Key West Yearly Mean Tempertures (1901 - 2000) '
 │   ├── TreeHeight.R :                                Trigonometric function to calculate tree height  '
@@ -67,6 +66,6 @@
 │   └── trees_treeheights.csv                       .gitignored
 └── Sandbox
 
-4 directories, 53 files
+4 directories, 52 files
 
 ```

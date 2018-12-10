@@ -2,7 +2,7 @@
 # Author: David Scott
 # Contact: david.scott18@imperial.ac.uk
 # Date:  November 15 2018
-# Description: 
+# Description: Plots network using igraph
 
 rm(list = ls()) 
 graphics.off() 

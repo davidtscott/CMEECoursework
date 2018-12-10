@@ -56,6 +56,7 @@ p <- p + scale_x_continuous("My x axis",
   theme_bw() + 
   theme(legend.position = "none") 
 
-pdf("../Results/MyBars.pdf") # Open blank pdf page using a relative path
+# Open blank pdf page using a relative path
+pdf("../Results/MyBars.pdf") 
 print(p)
 graphics.off() 

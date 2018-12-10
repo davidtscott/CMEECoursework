@@ -15,12 +15,17 @@ library(dplyr)
 # read data from file to dataframe
 MyDF <- read.csv("../Data/EcolArchives-E089-51-D1.csv", stringsAsFactors=FALSE)
 
+# convect prey.mass data units to mg
+# must divide by 1000  to convert from grams to milligrams
+MyDF <- MyDF %>% rowwise() %>% mutate(Prey.mass = 
+        ifelse(Prey.mass.unit == "mg", Prey.mass/1000, Prey.mass))
+
 #initiate plot and assign data to variables
 #subset graph by Type of feeding interactio and colour by Predator.lifestage
 p <- ggplot(MyDF, aes(x = Prey.mass, y = Predator.mass, colour = Predator.lifestage)) +
       facet_grid(rows = vars(Type.of.feeding.interaction))
 
-# add points of shape 3(crosses) and regression lines with standard error. 
+# add points of shape 3(crosses) and regression lines with standard er. 
 # adjusted length and width of line.
 p <- p + geom_point(shape = 3) + geom_smooth(method = "lm", se=TRUE, fullrange=TRUE, size = 0.5) 
 
@@ -36,7 +41,8 @@ pdf("../Results/PP_Regress.pdf", 11.7, 8.3)
 print(p)
 dev.off()
 #calculate reg results for fitted lines in each subset of data 
-#fitted_models <- MyDF %>% group_by(Type.of.feeding.interaction, Predator.lifestage) %>% do(model = lm(Predator.mass ~ Prey.mass, data = .))
+#fitted_models <- MyDF %>% group_by(Type.of.feeding.interaction, Predator.lifestage)
+#                          %>% do(model = lm(Predator.mass ~ Prey.mass, data = .))
 
 #fitted_models$model
 #library(broom)

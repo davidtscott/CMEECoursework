@@ -10,6 +10,7 @@ graphics.off() # clears graphics
 ## packages ##
 require(dplyr)
 require(tidyr)
+require(reshape2) # load the reshape2 package
 
 ################################################################
 ################## Wrangling the Pound Hill Dataset ############
@@ -59,7 +60,6 @@ rownames(TempData) <- NULL  # removes row names
 #head(TempData)
 dplyr::tbl_df(TempData) #like head()
 ############# Convert from wide to long format  ###############
-require(reshape2) # load the reshape2 package
 
 #?melt #check out the melt function
 #?gather #check out the gather function from tidyr package
@@ -97,5 +97,5 @@ dplyr::dim_desc(MyWrangledData) #like dim()
 dplyr::tbl_df(MyWrangledData) #like head()
 dplyr::glimpse(MyWrangledData) #like str()
 utils::View(MyWrangledData) #same as fix()
-dplyr::filter(MyWrangledData, Count > 100) #like subset()
+dplyr::filter(MyWrangledData, count > 100) #like subset()
 dplyr::slice(MyWrangledData, 10:15) # Look at an arbitrary set of data rows

@@ -26,7 +26,7 @@ args = commandArgs(trailingOnly=TRUE)
 # The heights of the tree, same units as "distance"
 
 # test if there is at least one argument given in command line: 
-# if not, return an error
+# if not, return an err
 if (length(args)==0) {
   stop("At least one argument must be supplied (input file).", call.=FALSE)
 } 

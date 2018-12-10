@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 # Date: October 2018
 
-"""Compares speed of two Stochastic Ricker models with and without Vectorization""" 
+"""
+Compares speed of two Stochastic Ricker models with and without
+Vectorization.
+""" 
 
 __appname__ = '[Vectorize2.py]'
 __author__ = 'David Scott (david.scott18@imperial.ac.uk)'
@@ -39,7 +42,7 @@ print("Stochastic Ricker takes:{}".format(time1))
 def stochrickvect(p0= np.random.uniform(.5, 1.5, (1000)),\
                   r=1.2, K=1, sigma=0.2, numyears=100):
     """ Vectorized Stochasitic Ricker model with Gausiann fluctiation. 
-    Does not loop through pop and pop has been removed from the model. """
+    Does not loop through pop and pop has been removed from the model."""
     N = np.full([numyears, len(p0)], np.nan)
     N[0,] = p0 
     # removed the pop loop

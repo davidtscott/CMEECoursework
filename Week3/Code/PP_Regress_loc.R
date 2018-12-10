@@ -14,6 +14,11 @@ library(dplyr)
 # read data from file to dataframe
 MyDF <- read.csv("../Data/EcolArchives-E089-51-D1.csv", stringsAsFactors=FALSE)
 
+# convect prey.mass data units to mg
+# must divide by 1000  to convert from grams to milligrams
+MyDF <- MyDF %>% rowwise() %>% mutate(Prey.mass = 
+                                        ifelse(Prey.mass.unit == "mg", Prey.mass/1000, Prey.mass))
+
 ## calculate reg results for fitted lines in each subset of data 
 LinearOutput2 <- dlply(MyDF,.(Type.of.feeding.interaction, Predator.lifestage, Location), function(x) lm(Predator.mass~Prey.mass, data = x))
 

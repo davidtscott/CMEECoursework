@@ -2,7 +2,7 @@
 ## Author: David Scott - _david.scott18@imperial.ac.uk_
 ## Date: _OCT - 2018_
 
-### Description: [Python 1: All scripts were written in Visual Studio Code for python3 and should run regardless of system type. Scripts, codes and results in respective directories. Map of directories and content provided below. Results files were gitignored but running scripts will regenerate them and send them to Results directory using relative paths.]
+### Description: Python 1: All scripts were written in Visual Studio Code for python3 and should run regardless of system type. Scripts, codes and results in respective directories. Map of directories and content provided below. Results files were gitignored but running scripts will regenerate them and send them to Results directory using relative paths.
 
 ### Map of directories with short description of each script.
 ```

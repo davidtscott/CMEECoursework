@@ -1,12 +1,14 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
-""" Script to convert bioclim temperature and rainfall data and CORINE
+""" 
+Script to convert bioclim temperature and rainfall data and CORINE
 landcover files into a shared projection and resolution (BNG 2km grid)
 and then extract mean climatic values within land cover classes
 
 Code is PEP8 compliant: https://www.python.org/dev/peps/pep-0008
 """
 
+## imports ##
 import numpy # to load rasters as arrays and provide no data masking
 import gdal  # to handle raster data files
 import os

@@ -2,7 +2,8 @@
 ## Author: David Scott - _david.scott18@imperial.ac.uk_
 ## Date: _OCT - 2018_
 
-### Biological Computing in R and Data Management, Exploration & Visualisation in R. 
+### Biological Computing in R 
+### Data Management, Exploration & Visualisation in R 
 
 #### Description: 
 All R scipts were written with R studio. Scripts are stored in the Code directory and use relative paths to call data from the Data directory and all outputs are directed to the Results directory. Thus, set working directory to Code. 

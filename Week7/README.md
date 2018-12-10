@@ -18,10 +18,6 @@
 │   ├── Nets.R :                                Plots network using igraph in R.'
 │   ├── profileme2.py :                         Second example of profiling functions in python.
 │   ├── profileme.py :                          Example of profiling functions in python.
-│   ├── __pycache__                           .gitignored
-│   │   ├── blackbirds.cpython-35.pyc         .gitignored
-│   │   ├── profileme2.cpython-35.pyc         .gitignored
-│   │   └── profileme.cpython-35.pyc          .gitignored
 │   ├── regexs.py :                             Example uses of regex in python. 
 │   ├── run_fmr_R.py :                          Use of subprocess to run Rscript fmr.R. Prints 'Succesful' if succesful
 │   ├── RunLV.sh :                              Runs three scipts, LV1.py LV2.py and LV3.py and checks speed '
@@ -49,6 +45,6 @@
 │   └── QMEENet.svg                           .gitignored
 └── Sandbox
 
-5 directories, 36 files
+4 directories, 33 files
 
 ```

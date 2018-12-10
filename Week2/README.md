@@ -24,11 +24,6 @@
 │   ├── loops.py :                        Basic boilerplate to demonstrate the use of loops in python 
 │   ├── oaks_debugme.py :                 Simple debug example fucntion. : Functions to detect and print oaks of genus 'Quercus'.
 │   ├── oaks.py :                         Using loops in python to manipulate data.
-│   ├── __pycache__                             .gitignored
-│   │   ├── boilerplate.cpython-35.pyc          .gitignored
-│   │   ├── control_flow.cpython-35.pyc         .gitignored
-│   │   ├── test_control_flow.cpython-35.pyc    .gitignored
-│   │   └── using_name.cpython-35.pyc           .gitignored
 │   ├── scope.py :                        Example to show global variables 
 │   ├── sysargv.py :                      Basic boiler plate example, using sys module 
 │   ├── test_control_flow.py :            Some functions exemplifying the use of control statements
@@ -54,6 +49,6 @@
     ├── testp.p
     └── test.txt
 
-6 directories, 40 files
+5 directories, 36 files
 
 ```

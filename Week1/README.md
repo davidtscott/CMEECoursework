@@ -2,9 +2,9 @@
 ## Author: David Scott - _david.scott18@imperial.ac.uk_
 ## Date: _OCT - 2018_
 
-### Description: [All files created using bash (Ubunto Linux distribution), LaTeX and bibtex as part of CMEE Week1. All code, data and results contained in their respective directories. A map of all directories and files is provded below. Scripts either call from data directory or are written with a variable, in such a case use command line: bash SCRIPTNAME.sh ../Data/FILENAME.]
+### Description: All files created using bash (Ubunto Linux distribution), LaTeX and bibtex as part of CMEE Week1. All code, data and results contained in their respective directories. A map of all directories and files is provded below. Scripts either call from data directory or are written with a variable, in such a case use command line: bash SCRIPTNAME.sh ../Data/FILENAME.
 
-### Map of directories with short description of each script.
+### Map of directories with short description of each script:
 ```
 .
 ├── Code

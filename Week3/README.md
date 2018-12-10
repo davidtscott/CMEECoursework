@@ -2,11 +2,11 @@
 ## Author: David Scott - _david.scott18@imperial.ac.uk_
 ## Date: _OCT - 2018_
 
-### Description: [Biological Computing in R & Data Management, Exploration and Visualisation in R. All R scipts were written with R studio. Scripts are stored in the Code directory and use relative paths to call data from the Data directory and all outputs are directed to the Results directory. Thus, set working directory to Code. NOTE: Data for GPDDmap.R and TAutoCorr.R were not pushed (.RData).]
+### Description: Biological Computing in R & Data Management, Exploration and Visualisation in R. All R scipts were written with R studio. Scripts are stored in the Code directory and use relative paths to call data from the Data directory and all outputs are directed to the Results directory. Thus, set working directory to Code. NOTE: Data for GPDDmap.R and TAutoCorr.R were not pushed (.RData).
 
 ### Packages: ggplot2, tidyr, dplyr, plyr, lattice.
 
-### Map of directories with short description of each script
+### Map of directories with short description of each script:
 ```
 .
 ├── Code

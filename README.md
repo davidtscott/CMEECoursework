@@ -1,6 +1,6 @@
 # README Document for CMEECourseWork Repository
 ## Author: David Scott - _david.scott18@imperial.ac.uk_
-## Date: _OCT - DEC - 2018_
+## Date: _OCT - NOV - DEC - 2018_
 
 ### For full course notes check out [The Multilingual Quantitative Biologist!](http://nbviewer.jupyter.org/github/mhasoba/TheMulQuaBio/blob/master/notebooks/Index.ipynb)
 
@@ -10,7 +10,7 @@ Repository contains an individual directory for each weeks coursework, each furt
 #### Map of directories:
 ```
 .
-├── README.tmp
+├── README.md
 ├── Assesment
 ├── Week1                 Unix & Shell Scripting
 ├── Week2                 Biological Computing in Python-1

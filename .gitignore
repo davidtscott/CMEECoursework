@@ -71,11 +71,14 @@ __pycache__
 # RStudio files
 .Rproj.user/
 
+##
+README.html
+
 ### week ###################
 MiniProject/
 Week9/
 C_Week10/
-Week7/Nets.py
+
 
 
 # anyfile above 10mb

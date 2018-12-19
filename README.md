@@ -3,6 +3,7 @@
 ## Date: _OCT - NOV - DEC - 2018_
 
 ### For full course notes check out [The Multilingual Quantitative Biologist!](http://nbviewer.jupyter.org/github/mhasoba/TheMulQuaBio/blob/master/notebooks/Index.ipynb)
+### Data and other resources are available at [TheMulQuaBio](https://mhasoba.github.io/TheMulQuaBio/) repository!
 
 #### Description: 
 Repository contains an individual directory for each weeks coursework, each further subdivided into four sub-directories; Code, Data, Results and Sandbox. Set working directory to Code. All scripts call data and output results to respective directories using relative paths. All scipts are annotated where appropriate.

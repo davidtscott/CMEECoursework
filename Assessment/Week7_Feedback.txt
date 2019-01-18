@@ -1,0 +1,1958 @@
+Starting weekly assessment for David Thomas, Week7
+
+Current Points = 100
+
+Note that: 
+(1) Major sections begin with a double "====" line 
+(2) Subsections begin with a single "====" line 
+(3) Code output or text file content are printed within single "*****" lines 
+
+======================================================================
+======================================================================
+Your Git repo size this week is about 44.30 MiB on disk 
+
+PART 1: Checking project workflow...
+
+Found the following directories in parent directory: Week6, Week1, Week7, Assessment, Week5, Week2, Week4, .git, Week3
+
+Found the following files in parent directory: .gitignore, README.md
+
+Checking for key files in parent directory...
+
+Found .gitignore in parent directory, great! 
+
+Printing contents of .gitignore:
+**********************************************************************
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.aux
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+*.pdf
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+
+
+###python##
+*.pyc
+__pycache__/*
+
+__pycache__
+
+#jupyernotebok
+.ipynb_checkpoints
+
+##################### R ################
+# History files
+.Rhistory
+.Rapp.history
+
+# Session Data files
+.RData
+
+# Example code in package build process
+*-Ex.R
+
+# Output files from R CMD build
+/*.tar.gz
+
+# Output files from R CMD check
+/*.Rcheck/
+
+# RStudio files
+.Rproj.user/
+
+##
+README.html
+
+### week ###################
+MiniProject/
+Week9/
+C_Week10/
+
+
+
+# anyfile above 10mb
+./Week5/Data/EU/g250_06.tif
+./Week5/Data/EU/bio1_15.tif
+./Week5/Data/EU/bio1_16.tif
+./Week5/Data/EU/bio12_15.tif
+./Week5/Data/EU/bio12_16.tif
+./Week5/Data/SRTM_Channels_network/SRTM_Channels_network.dbf
+./Week5/Data/SRTM_Channels_network/SRTM_Channels_network.shp
+./Week5/Data/SAFE_layout_shapefiles/sloperaster.tif
+./Week5/Data/Borneo/MODIS_red_reflectance.tif
+./Week5/Data/Borneo/MODIS_blue_reflectance.tif
+./Week5/Data/Borneo/MODIS_NIR_reflectance.tif
+**********************************************************************
+
+Found README in parent directory, named: README.md
+
+Printing contents of README.md:
+**********************************************************************
+# README Document for CMEECourseWork Repository
+## Author: David Scott - _david.scott18@imperial.ac.uk_
+## Date: _OCT - NOV - DEC - 2018_
+
+### For full course notes check out [The Multilingual Quantitative Biologist!](http://nbviewer.jupyter.org/github/mhasoba/TheMulQuaBio/blob/master/notebooks/Index.ipynb)
+### Data and other resources are available at [TheMulQuaBio](https://mhasoba.github.io/TheMulQuaBio/) repository!
+
+#### Description: 
+Repository contains an individual directory for each weeks coursework, each further subdivided into four sub-directories; Code, Data, Results and Sandbox. Set working directory to Code. All scripts call data and output results to respective directories using relative paths. All scipts are annotated where appropriate.
+
+#### Map of directories:
+```
+.
+├── README.md
+├── Assesment
+├── Week1                 Unix & Shell Scripting
+├── Week2                 Biological Computing in Python-1
+├── Week3                 Biological Computing in R and Data Management Exploration & Visualisation in R 
+|── Week4                 Statistics in R
+├── Week5                 GIS
+├── Week6                 Genomics & Bioinformatics
+└── Week7                 Biological Computing in Python-2
+    ├── Code
+    ├── Data
+    ├── Sandbox
+    └── Results
+
+8 directories
+
+```
+**********************************************************************
+
+======================================================================
+Looking for the weekly directories...
+
+Found 7 weekly directories: Week1, Week2, Week3, Week4, Week5, Week6, Week7
+
+The Week7 directory will be assessed 
+
+======================================================================
+======================================================================
+PART 2: Checking weekly code and workflow...
+
+======================================================================
+Assessing WEEK7...
+
+Found the following directories: Code, Data, Sandbox, Results
+
+Found the following files: README.md
+
+Checking for readme file in weekly directory...
+
+Found README in parent directory, named: README.md
+
+Printing contents of README.md:
+**********************************************************************
+# README Document for CMEECourseWork Week7
+## Author: David Scott - _david.scott18@imperial.ac.uk_
+## Date: _NOV - 2018_
+
+### Biological Computing in Python 2
+
+#### Description: 
+All scripts were written in Visual Studio Code for python3 or Rstudio for R. Scripts stored in code directory and use relative paths to call data from Data and direct outputs to Results.
+
+#### Map of directories with short description of each script. 
+```
+.
+├── Code
+│   ├── blackbirds.py :                         Using regex in python.
+│   ├── DrawFW.py :                             Creates and plots a synthetic food web network.
+│   ├── fmr.R :                                 Plots data and outputs list of species to csv\r. '
+│   ├── LV1.py :                                Lotka-Volterra numerical integration model, generates two figures.
+│   ├── LV2.py :                                L-V model, takes parameter values from command line. Has defaults also.  
+│   ├── LV3.py :                                Discrete time version of L-V model.
+│   ├── LV4.py :                                Discrete time version of L-V model with random gausian fluctuation.
+│   ├── Nets.R :                                Plots network using igraph in R.'
+│   ├── profileme2.py :                         Second example of profiling functions in python.
+│   ├── profileme.py :                          Example of profiling functions in python.
+│   ├── regexs.py :                             Example uses of regex in python. 
+│   ├── run_fmr_R.py :                          Use of subprocess to run Rscript fmr.R. Prints 'Succesful' if succesful
+│   ├── RunLV.sh :                              Runs three scipts, LV1.py LV2.py and LV3.py and checks speed '
+│   ├── TestR.py :                              Example script to run an Rscript from python using subprocess module
+│   ├── TestR.R :                               Rscript for demonstrating subprocces in python '
+│   ├── timeitme.py :                           Example of timeit module in python.  Imports modules from profileme and profileme2.
+│   └── using_os.py :                           Use the subprocess.os module to get list of files and  directories  in ubuntu home directory. 
+├── Data
+│   ├── blackbirds.txt
+│   ├── NagyEtAl1999.csv
+│   ├── QMEE_Net_Mat_edges.csv
+│   ├── QMEE_Net_Mat_nodes.csv
+│   └── TestOaksData.csv
+├── README.tmp
+├── Results
+│   ├── fmr_plot.pdf                          .gitignored
+│   ├── LV2_model2.pdf                        .gitignored
+│   ├── LV2_model.pdf                         .gitignored
+│   ├── LV3_model1.pdf                        .gitignored
+│   ├── LV3_model2.pdf                        .gitignored
+│   ├── LV4_model1.pdf                        .gitignored
+│   ├── LV4_model2.pdf                        .gitignored
+│   ├── LV_model2.pdf                         .gitignored
+│   ├── LV_model.pdf                          .gitignored
+│   └── QMEENet.svg                           .gitignored
+└── Sandbox
+
+4 directories, 33 files
+
+```
+**********************************************************************
+
+Found following files in results directory: TestR.Rout, fmr_plot.pdf, LV_model2.pdf, LV2_model2.pdf, LV_model.pdf, LV2_model.pdf, .gitignore, TestR_errFile.Rout, QMEENet.svg...
+ideally, Results directory should be empty other than, perhaps, a readme. 
+
+Found 18 code files: TestR.py, regexs.py, LV3.py, profileme2.py, timeitme.py, blackbirds.py, Nets.py, TestR.R, profileme.py, LV4.py, fmr.R, using_os.py, LV1.py, RunLV.sh, DrawFW.py, Nets.R, run_fmr_R.py, LV2.py
+
+======================================================================
+Testing script/code files...
+
+======================================================================
+Inspecting script file TestR.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+# Date: Nov 2018
+
+"""
+Example script to run an Rscript from python using subprocess module
+""" 
+
+__appname__ = '[subprocess Rscript in python]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program" 
+
+##packages 
+import subprocess
+
+
+subprocess.Popen("/usr/lib/R/bin/Rscript --verbose TestR.R > \
+../Results/TestR.Rout 2> ../Results/TestR_errFile.Rout",\
+ shell=True).wait()
+
+# backlash allow python to read multiline script as single line
+**********************************************************************
+
+Testing TestR.py...
+
+TestR.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.11227s
+
+======================================================================
+Inspecting script file regexs.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+# Date: Nov 2018
+
+"""
+Example uses of regex in python. 
+
+""" 
+
+__appname__ = '[examples of regex in python]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program" 
+
+##packages 
+import re 
+
+# always include r infront of regex
+
+# create a string
+my_string = "a given string"
+
+# find a space in the string (\s)
+match = re.search(r'\s', my_string)
+print(match) # tells if match was found
+
+# to view match 
+match.group()
+
+
+### another example 
+# searches for numeric characters (d)
+match = re.search(r'd', my_string)
+print(match)
+
+
+### if statement to know if pattern was matched
+
+MyStr = 'an example' # create a new string
+
+# match any alphanumeric character (w) and 
+#       match white space (\s), zero or more times (*)
+# i.e any letter followed by a space 
+match = re.search(r'\w*\s', MyStr) 
+
+if match:
+    print('found a match:', match.group())
+else:
+    print('did not find a match')
+
+
+### more examples of regexes 
+match = re.search(r'2' , "it takes 2 to tango") # matches number '2' in string
+match.group()
+
+match = re.search(r'\d' , "it takes 2 to tango") # \d numeric integer 
+match.group()
+
+# match numeric integer (\d) and anything that follows
+match = re.search(r'\d.*' , "it takes 2 to tango") 
+match.group()
+
+# match white space, alphanumeric character 1 to 3 times, following by a white space
+#   i.e any word with 1 to 3 letters
+match = re.search(r'\s\w{1,3}\s', 'once upon a time')
+match.group()
+
+# match white space then alphanumeric character zero or more times, 
+# match end of string
+match = re.search(r'\s\w*$', 'once upon a time')
+match.group()
+
+### more compact syntex 
+# directly return matched group 
+# appends .group() to the result
+
+# match letter zero or more times, then white space, 
+# then numeric zero or time then a numeric
+re.search(r'\w*\s\d.*\d', 'take 2 grams of H20').group()
+
+# match start of a string (^), any number of letters (\w*),
+# then any number of any character (.*) followed by space (\s)
+re.search(r'^\w*.*\s', 'once upon a time').group()
+
+## blackbird example re.findall ####
+
+# use ? to terminate *, + and {} at first found instance of pattern
+re.search(r'^\w*.*?\s', 'once upon a time').group()
+
+## to illustrate, match a HTML tag
+# + is 'greedy'
+re.search(r'<.+>', 'This is a <EM.first</EM> test').group()
+# + is 'lazy'
+re.search(r'<.+?>', 'This is a <EM>first</EM> test').group()
+
+###
+# use \ before . t find a literal .
+re.search(r'\d*\.?\d*','1432.75+60.22i').group()
+
+# match any characer lister ([ATGC]) as many times (+)
+re.search(r'[AGTC]+', 'the sequence ATTCGT').group()
+
+# 
+re.search(r'\s+[A-Z]{1}\w+\s\w+', 'The bird-shit frog''s name is Theloderma asper').group()
+
+### search email address 
+MyStr = 'David Scott, david.scott18@imperial.ac.uk, Systems biology and ecological theory'
+match = re.search(r"[\w\s]+,\s[\w\.@]+,\s[\w\s&]+",MyStr)
+match.group()
+# [\w\s] ensures any combination of word characters and spaces is found
+
+
+MyStr = 'David Scott, d-scott@imperial.ac.uk, Systems biology and ecological theory'
+match = re.search(r"[\w\s]+,\s[\w\.-]+@[\w\.-]+,\s[\w\s&]+",MyStr)
+match.group()
+
+### grouping regex patterns 
+MyStr = 'David Scott, d.scott@imperial.ac.uk, Systems biology and ecological theory'
+match = re.search(r"[\w\s]+,\s[\w\.-]+@[\w\.-]+,\s[\w\s&]+",MyStr)
+match.group()
+
+# without grouping regex 
+match.group(0)
+
+# create groups - used for extractign specific patterns 
+match = re.search(r"([\w\s]+),\s([\w\.-]+@[\w\.-]+),\s([\w\s&]+)",MyStr)
+if match:
+    print(match.group(0))
+    print(match.group(1))
+    print(match.group(2))
+    print(match.group(3))
+
+##### find all matches 
+# re.findall() 
+# returns al lmatches as list of strings 
+
+MyStr = "Samraat Pawar, s.pawar@imperial.ac.uk,\
+ Systems biology and ecological theory; Another academic,\
+  a-academic@imperial.ac.uk, Some other stuff thats equally boring; \
+  Yet another academic, y.a_academic@imperial.ac.uk,\
+   Some other stuff thats even more boring"
+
+emails = re.findall(r'[\w\.-]+@[\w\.-]+', MyStr)
+for email in emails:
+    print(email)
+
+### finding in files 
+f = open('../Data/TestOaksData.csv', 'r')
+found_oaks = re.findall(r"Q[\w\s].*\s", f.read())
+
+found_oaks
+
+for name in found_oaks:
+    print(name.replace(",",""))
+
+### groups within multiple matches 
+MyStr = "Samraat Pawar, s.pawar@imperial.ac.uk, Systems biology and ecological theory; Another academic, a.academic@imperial.ac.uk, Some other stuff thats equally boring; Yet another academic, y.a.academic@imperial.ac.uk, Some other stuff thats even more boring"
+
+found_matches = re.findall(r"([\w\s]+),\s([\w\.-]+@[\w\.-]+)", MyStr)
+found_matches
+
+for item in found_matches:
+    print(item)
+
+#### Extracting text from wbpages 
+import urllib3 
+
+conn = urllib3.PoolManager() # open a connection
+r = conn.request('GET', 'https://www.imperial.ac.uk/silwood-park/academic-staff/') 
+webpage_html = r.data #read in the webpage's contents
+
+type(webpage_html)
+
+My_Data  = webpage_html.decode()
+#print(My_Data)
+
+pattern = r"Dr\s+\w+\s+\w+"
+regex = re.compile(pattern) # example use of re.compile(); you can also ignore case  with re.IGNORECASE 
+for match in regex.finditer(My_Data): # example use of re.finditer()
+    print(match.group())
+
+### replacing text 
+New_Data = re.sub(r'\t'," ", My_Data) # replace all tabs with a space
+print(New_Data)
+**********************************************************************
+
+Testing regexs.py...
+
+regexs.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+<_sre.SRE_Match object; span=(1, 2), match=' '>
+None
+found a match: an 
+David Scott, d.scott@imperial.ac.uk, Systems biology and ecological theory
+David Scott
+d.scott@imperial.ac.uk
+Systems biology and ecological theory
+s.pawar@imperial.ac.uk
+a-academic@imperial.ac.uk
+y.a_academic@imperial.ac.uk
+Quercus robur
+
+Quercus cerris
+
+Quercus petraea
+
+('Samraat Pawar', 's.pawar@imperial.ac.uk')
+(' Another academic', 'a.academic@imperial.ac.uk')
+(' Yet another academic', 'y.a.academic@imperial.ac.uk')
+Dr M
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.42433s
+
+======================================================================
+Inspecting script file LV3.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+# Date: Nov 2018
+
+"""
+Discrete time version of L-V model 
+""" 
+
+"""
+Example of numerical integration using Lotka-Volterra model,
+for predator prey relationship i two dimensional space.
+
+Discrete time version
+
+Edited so that it can take parameter values from command line.
+sys.argv[1] = r, [2] = a, [3] = z, [4] = e. values converted to floats.
+
+If five arguments are not given in command line (including script)
+it uses default values: r = 1., a = 0.1, z = 1.5, e = 0.75
+
+prints final non-zero value on screen.
+""" 
+
+__appname__ = '[LV3.py]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program" 
+
+# example of numerical integration using lotka-volterra model
+
+### Packages ###
+import scipy as sc 
+import sys
+import scipy.integrate as integrate
+import matplotlib.pylab as p
+
+
+def dCR_dt(pops): # t=0 is the default value, so can run without input
+    """Lotka-Volterra pred-prey model"""
+    R = pops[0] # resource (prey)
+    C = pops[1] # Consumer (predator)
+    K = 50      
+    Rt = R * (1 + r * (1 - (R / K) - a * C))
+    Ct = C * (1 - z + e * a * R)
+    Rt = max(Rt, 0) # sets bottom limit of 0, no upper limit. 
+    Ct = max(Ct, 0) # 
+ 
+    return sc.array([Rt, Ct])
+
+
+## Define four LV model parameters
+# give defaults and take arguments from command line
+if len(sys.argv) != 5:   
+    r = 1.      # intrinsic (per capita) growth rate of prey pop (time ^-1)
+    a = 0.1     # search rate (per capita) for resource (area x time^-1)
+    z = 1.5     # mortality rate 
+    e = 0.75    # consumer efficiency in converting resource to consumer biomass
+else: # takes arguements from command line and convert to floats
+    r = float(sys.argv[1]) 
+    a = float(sys.argv[2])
+    z = float(sys.argv[3])
+    e = float(sys.argv[4])
+  
+# K is the carry capacity 
+
+### time interval
+t = sc.linspace(0, 50, 1000) # 1000 point between 0 and 15
+# 50 can be anything. minutes, seconds, years etc 
+# timescales matter in biology
+# depend on parameters. e.g tree would differ from bacteria 
+
+# initiial R and C values
+R0 = 10
+C0 = 5
+# RC0 = sc.array([R0, C0])
+
+# data the feed into function 
+listpop = sc.array([[R0,C0]]) # create array 
+for i in t:     # for each time in t (defined above)  
+    temppops = dCR_dt(listpop[-1]) # take last [R,C] from listpops, feed into dCR_dt
+    print(temppops)
+    if temppops[0] <= 0 or temppops[-1] <= 0:
+        break   # if any value are 0 or below, stop. i.e 0 = extinct 
+    listpop = sc.vstack((listpop,temppops)) # append output to listpop array
+
+
+### PLots ###
+
+t = range(len(listpop)) # keeps length of to = len og listpop
+
+f1 = p.figure() # open figure
+
+p.plot(t, listpop[:,0], 'g-', label='Resource density') # plot time v resource (prey)
+p.plot(t, listpop[:,1] , 'b-', label='Consumer density') # plot time v consumer (pred)
+p.grid()    # add grid lines
+p.legend(loc='best') # legend
+p.text(1, 15, "r = %.2f, a = %.2f, z = %.2f, e = %.2f" % (r, a, z, e), fontsize = 15)
+# add text line with parameter values r, a, z, e. 
+#   format so they change depending on value given in command line
+p.xlabel('Time') # add x axis label
+p.ylabel('Population density') # add y axis label 
+p.title('Consumer-Resource population dynamics') # add plot title
+p.show() #displays figure
+
+f1.savefig('../Results/LV3_model1.pdf') # save figure
+
+#####
+
+f2 = p.figure() # open figure
+
+p.plot(listpop[:,0], listpop[:,1], 'r-') #plots resource against consumber density
+p.grid() # plot grid lines
+p.text(12, 4, "r = %.2f, a = %.2f, z = %.2f, e = %.2f" % (r, a, z, e), fontsize = 15)
+# add text line with parameter values r, a, z, e. 
+#   format so they change depending on value given in command line
+p.xlabel('Resource density') # x axis label
+p.ylabel('Consumer density')    # y axis label
+p.title('Consumer-Resource population dynamics') # plot title 
+p.show() #displays figure
+
+f2.savefig('../Results/LV3_model2.pdf') #save figure
+**********************************************************************
+
+Testing LV3.py...
+
+LV3.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+[ 13.     1.25]
+[ 20.995     0.59375]
+[ 31.92762138   0.63805859]
+[ 41.4306133    1.20884769]
+[ 43.5229821    3.15182375]
+[ 35.44328791   8.71234578]
+[ 14.88262469  18.80339059]
+[  0.          11.58659008]
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 6.03101s
+
+======================================================================
+Inspecting script file profileme2.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+# Date: Nov 2018
+
+"""Second example of profiling functions in python""" 
+
+__appname__ = '[profileme2.py'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program" 
+
+def my_squares(iters):
+    """squares each element and adds it to new list 'out' """
+    out = [i ** 2 for i in range(iters)]
+    return out 
+
+def my_join(iters, string):
+    """add comman to each element and adds it to new string 'out'."""
+    out = ''
+    for i in range(iters):
+        out += ", " + string
+    return out 
+
+def run_my_funcs(x,y):
+    """calls my_squares and my_join functions"""
+    print(x,y)
+    my_squares(x)
+    my_join(x,y)
+    return 0 
+
+run_my_funcs(10000000, "My string")
+**********************************************************************
+
+Testing profileme2.py...
+
+profileme2.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+10000000 My string
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 3.82064s
+
+======================================================================
+Inspecting script file timeitme.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+# Date: Nov 2018
+
+"""
+Example of timeit module in python. 
+Imports modules from profileme and profileme2.
+""" 
+
+__appname__ = '[timeitme.py]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program" 
+
+##### Modules ## 
+import time
+import timeit
+from profileme import my_squares as my_squares_loops
+from profileme2 import my_squares as my_squares_lc
+from profileme import my_join as my_join_join
+from profileme2 import my_join as my_join
+
+#nmber of iterations 
+iters = 1000000
+
+### Loops versus list comprehension 
+
+# %timeit my_squares_loops(iters)
+# %timeit my_squares_lc(iters)
+
+start = time.time()
+my_squares_loops(iters)
+print("my_squares_loops takes %f s to run." % (time.time() - start))
+
+start = time.time()
+my_squares_lc(iters)
+print("my_squares_lc takes %f s to run." % (time.time() - start))
+
+
+### loops versus join method for strings
+
+mystring = "my string"
+
+# %timeit(my_join_join(iters, mystring))
+# %timeit(my_join(iters, mystring))
+
+start = time.time()
+my_join_join(iters, mystring)
+print("my_join_join takes %f s to run." % (time.time() - start))
+
+start = time.time()
+my_join(iters, mystring)
+print("my_join takes %f s to run." % (time.time() - start))
+**********************************************************************
+
+Testing timeitme.py...
+
+timeitme.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 10.01874s
+
+======================================================================
+Inspecting script file blackbirds.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+# Date: Nov 2018
+
+"""
+Using regex in python.
+""" 
+"""
+Use of regex in python. Loads data and extracts data on kingdom,
+phylum and species name of each species in the file. 
+
+decode data to ASCII
+
+Prints and formas output to the screen. 
+"""
+
+__appname__ = '[blackbirds.py]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program" 
+
+## imports ## 
+import re
+
+# Read the file
+with open('../Data/blackbirds.txt', 'r') as f:
+    text = f.read()
+
+#encoding="ascii", errors="surrogateescape"
+
+# remove \t\n and put a space in:
+text = text.replace('\t',' ')
+text = text.replace('\n',' ')
+
+# note that there are "strange characters" (these are accents and
+# non-ascii symbols) because we don't care for them, first transform
+# to ASCII:
+text = text.encode('ascii', 'ignore').decode() 
+#print(text)
+# Now extend this script so that it captures the Kingdom, 
+# Phylum and Species name for each species and prints it out to screen neatly.
+
+# Hint: you may want to use re.findall(my_reg, text)...
+# Keep in mind that there are multiple ways to skin this cat! 
+# Your solution may involve multiple regular expression calls 
+# (easier!), or a single one (harder!)
+
+reg_string = r"Kingdom\s(\w+).*?Phylum\s(\w+).*?Species\s(\w*\s\w+)" 
+
+# carry out the cmmand on that string 
+
+species = re.findall(reg_string, text)
+#print(species)
+
+# format and print output to screen
+print('{A1:<15}{B1:<15}{C1:<15}'.format(A1='Kingdom', B1='Phylum', C1='Species'))
+print('-'*50)
+for i in species:
+    print('{A2:<15}{B2:<15}{C2:<15}'.format(A2=i[0], B2=i[1], C2=i[2]))
+**********************************************************************
+
+Testing blackbirds.py...
+
+blackbirds.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+Kingdom        Phylum         Species        
+--------------------------------------------------
+Animalia       Chordata       Euphagus carolinus
+Animalia       Chordata       Euphagus cyanocephalus
+Animalia       Chordata       Turdus boulboul
+Animalia       Chordata       Agelaius assimilis
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.03591s
+
+======================================================================
+Inspecting script file Nets.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+
+"""Network visualization of QMEE CDT collaboration network. Nodes are coloured by type of node""" 
+
+__appname__ = '[Nets.py]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program"
+
+## imports ##
+import networkx as nx
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+
+##  import data 
+# read in edges (links) and nodes data as a pandas dataframes
+edgesDF = pd.read_csv("../Data/QMEE_Net_Mat_edges.csv")
+nodesDF = pd.read_csv("../Data/QMEE_Net_Mat_nodes.csv")
+
+# convert nodes dataframe to categorical values 
+nodesDF['Type']=pd.Categorical(nodesDF['Type'])
+newNode = nodesDF['Type'].cat.codes
+
+# convert edges dataframe to just values
+edges_values = edgesDF.values
+
+G = nx.from_numpy_matrix(np.array(edges_values)) 
+
+# open empty figure
+plt.figure()
+# draw it. specify labels and colour by "type"
+nx.draw(G, labels = nodesDF["id"], node_color=newNode, with_labels=True)
+plt.show()
+# save as svg
+plt.savefig("../Results/Nets_py.svg", format = "svg")
+**********************************************************************
+
+Testing Nets.py...
+
+Nets.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Encountered error:
+/usr/lib/python3/dist-packages/networkx/drawing/nx_pylab.py:126: MatplotlibDeprecationWarning: pyplot.hold is deprecated.
+    Future behavior will be consistent with the long-time default:
+    plot commands add elements without first clearing the
+    Axes and/or Figure.
+  b = plt.ishold()
+/usr/lib/python3/dist-packages/networkx/drawing/nx_pylab.py:522: MatplotlibDeprecationWarning: The is_string_like function was deprecated in version 2.1.
+  if not cb.is_string_like(edge_color) \
+/usr/lib/python3/dist-packages/networkx/drawing/nx_pylab.py:543: MatplotlibDeprecationWarning: The is_string_like function was deprecated in version 2.1.
+  if cb.is_string_like(edge_color) or len(edge_color) == 1:
+/usr/lib/python3/dist-packages/networkx/drawing/nx_pylab.py:724: MatplotlibDeprecationWarning: The is_string_like function was deprecated in version 2.1.
+  if not cb.is_string_like(label):
+/usr/lib/python3/dist-packages/networkx/drawing/nx_pylab.py:138: MatplotlibDeprecationWarning: pyplot.hold is deprecated.
+    Future behavior will be consistent with the long-time default:
+    plot commands add elements without first clearing the
+    Axes and/or Figure.
+  plt.hold(b)
+/usr/local/lib/python3.5/dist-packages/matplotlib/__init__.py:805: MatplotlibDeprecationWarning: axes.hold is deprecated. Please remove it from your matplotlibrc and/or style files.
+  mplDeprecation)
+/usr/local/lib/python3.5/dist-packages/matplotlib/rcsetup.py:155: MatplotlibDeprecationWarning: axes.hold is deprecated, will be removed in 3.0
+  mplDeprecation)
+
+======================================================================
+Inspecting script file TestR.R...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env Rscript
+# Author: David Scott
+# Contact: david.scott18@imperial.ac.uk
+# Date:  November 15 2018
+# Description: Rscript for demonstrating subprocces in python
+
+rm(list = ls()) 
+graphics.off() 
+
+Rscript 
+print("Hello, this is R!")
+**********************************************************************
+
+Testing TestR.R...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Encountered error:
+Error: object 'Rscript' not found
+Execution halted
+
+======================================================================
+Inspecting script file profileme.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+# Date: Nov 2018
+
+"""Example of profiling functions in python""" 
+
+__appname__ = '[profileme.py]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program" 
+
+def my_squares(iters):
+    """squares each element and adds it to new list 'out' """
+    out = []
+    for i in range(iters):
+        out.append(i ** 2)
+    return out 
+
+# range in python3 iterates efficieantly. 
+# append grows memory of lis defined. thsi si slow  
+
+def my_join(iters, string):
+    """add comman to each element and adds it to new string 'out'."""
+    out = '' # creates a string
+    for i in range(iters):
+        out += string.join(", ") #.join for strings 
+    return out 
+
+def run_my_funcs(x,y):
+    """calls my_squares and my_join functions"""
+    print(x,y)
+    my_squares(x)
+    my_join(x,y)
+    return 0 
+
+run_my_funcs(10000000,"My string")
+**********************************************************************
+
+Testing profileme.py...
+
+profileme.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+10000000 My string
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 6.90497s
+
+======================================================================
+Inspecting script file LV4.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+# Date: Nov 2018
+
+"""
+Discrete time version of L-V model with random gausian fluctuation
+""" 
+
+"""
+Example of numerical integration using Lotka-Volterra model,
+for predator prey relationship i two dimensional space.
+
+Discrete time version
+
+Edited so that it can take parameter values from command line.
+sys.argv[1] = r, [2] = a, [3] = z, [4] = e. values converted to floats.
+
+If five arguments are not given in command line (including script)
+it uses default values: r = 1., a = 0.1, z = 1.5, e = 0.75
+
+prints final non-zero value on screen.
+
+Further edited with a random gaussian fluctuation in resources 
+growth rate at each time step. 
+""" 
+
+__appname__ = '[LV4.py]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program" 
+
+# example of numerical integration using lotka-volterra model
+
+### Packages ###
+import sys
+import scipy as sc 
+from scipy.stats import norm
+import scipy.integrate as integrate
+import matplotlib.pylab as p
+
+
+def dCR_dt(pops): # t=0 is the default value, so can run without input
+    """Lotka-Volterra pred-prey model"""
+    R = pops[0] # resource (prey)
+    C = pops[1] # Consumer (predator)
+    K = 50
+    E = norm.rvs(size = 1000)[0]   
+    Rt = R * (1 + (r + E) * (1 - (R / K)) - a * C)
+    Ct = C * (1 - z + e * a * R)
+    Rt = max(Rt, 0) # sets bottom limit of 0, no upper limit. 
+    Ct = max(Ct, 0) # 
+ 
+    return sc.array([Rt, Ct])
+
+
+## Define four LV model parameters
+# give defaults and take arguments from command line
+if len(sys.argv) != 5:   
+    r = 1.      # intrinsic (per capita) growth rate of prey pop (time ^-1)
+    a = 0.1     # search rate (per capita) for resource (area x time^-1)
+    z = 1.5     # mortality rate 
+    e = 0.75    # consumer efficiency in converting resource to consumer biomass
+else: # takes arguements from command line and convert to floats
+    r = float(sys.argv[1]) 
+    a = float(sys.argv[2])
+    z = float(sys.argv[3])
+    e = float(sys.argv[4])
+  
+# K is the carry capacity 
+
+### time interval
+t = sc.linspace(0, 50, 1000) # 1000 point between 0 and 15
+# 50 can be anything. minutes, seconds, years etc 
+# timescales matter in biology
+# depend on parameters. e.g tree would differ from bacteria 
+
+# initiial R and C values
+R0 = 10
+C0 = 5
+# RC0 = sc.array([R0, C0])
+
+# data the feed into function 
+listpop = sc.array([[R0,C0]]) # create array 
+for i in t:     # for each time in t (defined above)  
+    temppops = dCR_dt(listpop[-1]) # take last [R,C] from listpops, feed into dCR_dt
+    print(temppops)
+    if temppops[0] <= 0 or temppops[-1] <= 0:
+        break   # if any value are 0 or below, stop. i.e 0 = extinct 
+    listpop = sc.vstack((listpop,temppops)) # append output to listpop array
+
+####
+#print(temppops[-1])
+
+
+### PLots ###
+
+t = range(len(listpop)) # keeps length of to = len og listpop
+
+f1 = p.figure() # open figure
+
+p.plot(t, listpop[:,0], 'g-', label='Resource density') # plot time v resource (prey)
+p.plot(t, listpop[:,1] , 'b-', label='Consumer density') # plot time v consumer (pred)
+p.grid()    # add grid lines
+p.legend(loc='best') # legend
+p.text(1, 15, "r = %.2f, a = %.2f, z = %.2f, e = %.2f" % (r, a, z, e), fontsize = 15)
+# add text line with parameter values r, a, z, e. 
+#   format so they change depending on value given in command line
+p.xlabel('Time') # add x axis label
+p.ylabel('Population density') # add y axis label 
+p.title('Consumer-Resource population dynamics') # add plot title
+p.show() #displays figure
+
+f1.savefig('../Results/LV4_model1.pdf') # save figure
+
+#####
+
+f2 = p.figure() # open figure
+
+p.plot(listpop[:,0], listpop[:,1], 'r-') #plots resource against consumber density
+p.grid() # plot grid lines
+p.text(12, 4, "r = %.2f, a = %.2f, z = %.2f, e = %.2f" % (r, a, z, e), fontsize = 15)
+# add text line with parameter values r, a, z, e. 
+#   format so they change depending on value given in command line
+p.xlabel('Resource density') # x axis label
+p.ylabel('Consumer density')    # y axis label
+p.title('Consumer-Resource population dynamics') # plot title 
+p.show() #displays figure
+
+f2.savefig('../Results/LV4_model2.pdf') #save figure
+**********************************************************************
+
+Testing LV4.py...
+
+LV4.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+[ 14.57761593   1.25      ]
+[ 32.19735033   0.74165149]
+[ 33.2941397    1.42011522]
+[ 27.66188829   2.83605599]
+[ 20.95167001   4.4657718 ]
+[ 11.00367868   4.78451738]
+[ 16.05516197   1.5562882 ]
+[ 27.75341922   1.09584034]
+[ 30.59345587   1.73307855]
+[ 53.08571221   3.11002539]
+[ 34.53180507  10.82733075]
+[  0.          22.62788024]
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 6.57432s
+
+======================================================================
+Inspecting script file fmr.R...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env Rscript
+# Author: David Scott
+# Contact: david.scott18@imperial.ac.uk
+# Date:  November 2018
+# Description: Plots data and outputs list of species to csv
+
+## packages ##
+rm(list = ls()) 
+graphics.off() 
+
+# Plots log(field metabolic rate) against log(body mass) for the Nagy et al 
+# 1999 dataset to a file fmr.pdf.
+# Writes the list of species names to species.csv
+
+cat("Reading CSV\n") # prints to bash 
+
+# loads csv data to nagy
+nagy <- read.csv('../Data/NagyEtAl1999.csv', stringsAsFactors = FALSE)
+
+cat("Creating graph\n")
+pdf('../Results/fmr_plot.pdf', 11, 8.5) # opens pdf to save graph to
+col <- c(Aves='purple3', Mammalia='red3', Reptilia='green3')  # defines colours
+# plots log body mass vs log metablic rate
+plot(log10(nagy$M.g), log10(nagy$FMR.kJ.day.1), pch=19, col=col[nagy$Class], # colour by class  
+     xlab=~log[10](M), ylab=~log[10](FMR)) 
+for(class in unique(nagy$Class)){  # linear model for each class subset
+    model <- lm(log10(FMR.kJ.day.1) ~ log10(M.g), data=nagy[nagy$Class==class,])
+    abline(model, col=col[class]) # adds line to graph 
+}
+dev.off() # clears graphs
+
+cat("Finished in R!\n")
+**********************************************************************
+
+Testing fmr.R...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+Reading CSV
+Creating graph
+null device 
+          1 
+Finished in R!
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.16061s
+
+======================================================================
+Inspecting script file using_os.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+# Date: Nov 2018
+
+"""
+Use the subprocess.os module to get list of files and  directories 
+in ubuntu home directory. 
+"""
+
+__appname__ = '[using_os.py]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program" 
+
+# Hint: look in subprocess.os and/or subprocess.os.path and/or 
+# subprocess.os.walk for helpful functions
+
+## imports ##
+import subprocess
+import re
+
+#################################
+#~Get a list of files and 
+#~directories in your home/ that start with an uppercase 'C'
+
+# Type your code here:
+
+
+# Get the user's home directory.
+home = subprocess.os.path.expanduser("~")
+
+# Create a list to store the results.
+FilesDirsStartingWithC = []
+
+# Use a for loop to walk through the home directory.
+for (dir, subdir, files) in subprocess.os.walk(home):
+    for i in subdir + files:
+        FilesDirsStartingWithC += re.findall(r"^C", i)
+print("Number of subdirs and files beginning with 'C':")
+print(len(FilesDirsStartingWithC))
+
+#################################
+# Get files and directories in your home/ that start with either an 
+# upper or lower case 'C'
+
+FilesDirsStartingWithCorc = []
+
+# Type your code here:
+
+for (dir, subdir, files) in subprocess.os.walk(home):
+    for i in subdir + files:
+        FilesDirsStartingWithCorc += re.findall(r"^[Cc]", i)
+print("Number of subdirs and files beginning with 'C' or 'c':")
+print(len(FilesDirsStartingWithCorc))
+#################################
+# Get only directories in your home/ that start with either an upper or 
+#~lower case 'C' 
+
+DirsStartingWithCorc = []
+
+# Type your code here:
+for (dir, subdir, files) in subprocess.os.walk(home):
+    for i in subdir:
+        if re.search(r"^[Cc]", i) != None:
+            DirsStartingWithCorc.append(i)
+print("Number of subdirs beginning with 'C' or 'c':")
+print(len(DirsStartingWithCorc))
+**********************************************************************
+
+Testing using_os.py...
+
+using_os.py is a Python script file;
+ checking for docstrings...
+
+Found no doctrings!
+1 pt deducted
+
+Current Points = 99
+
+Output (only first 500 characters): 
+
+**********************************************************************
+Number of subdirs and files beginning with 'C':
+14153
+Number of subdirs and files beginning with 'C' or 'c':
+30646
+Number of subdirs beginning with 'C' or 'c':
+3871
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 5.37008s
+
+======================================================================
+Inspecting script file LV1.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+# Date: Nov 2018
+
+"""
+Lotka-Volterra numerical integration model, generates two figures.
+"""
+
+"""
+Example of numerical integration using Lotka-Volterra model,
+for predator prey relationship in two dimensional space.
+
+Prints two graphs to the ../Results directory
+""" 
+
+__appname__ = '[LV1.py]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program" 
+
+# example of numerical integration using lotka-volterra model
+
+## imports ###
+import scipy as sc 
+import scipy.integrate as integrate 
+import matplotlib.pylab as p
+
+## functions ##
+def dCR_dt(pops, t=0): # t=0 is the default value, so can run without input
+    """Lotka-Volterra pred-prey model"""
+    R = pops[0]  # resource (prey)
+    C = pops[1]  # Consumer (predator)
+    dRdt = r * R - a * R * C 
+    dCdt = -z * C + e * a * R * C
+
+    return sc.array([dRdt, dCdt])
+
+#type(dCR_dt)
+
+r = 1.      # intrinsic (per capita) growth rate of prey pop (time ^-1)
+a = 0.1     # search rate (per capita) for resource (area x time^-1)
+z = 1.5     # mortality rate 
+e = 0.75    # consumer efficiency in converting resource to consumer biomass
+
+t = sc.linspace(0, 15, 1000) # 1000 point between 0 and 15
+# 15 cn be anything. minutes, seconds, years etc 
+# timescales matter in biology
+# depend on parameters. e.g tree would differ from bacteria 
+
+R0 = 10 # start point for R
+C0 = 5  # start point for C
+RC0 = sc.array([R0, C0])
+
+pops, infodict = integrate.odeint(dCR_dt, RC0, t, full_output=True)
+# odeint takes start vales, feeds to function 
+
+#type(infodict)
+
+infodict.keys()
+
+infodict['message']
+
+### PLOTS ###
+
+f1 = p.figure() # open new plot
+
+p.plot(t, pops[:,0], 'g-', label='Resource density') # plot time v resource (prey)
+p.plot(t, pops[:,1] , 'b-', label='Consumer density') # plot time v consumer (pred)
+p.grid() # grid lines
+p.legend(loc='best')  # leged 
+p.xlabel('Time')  # x axis label
+p.ylabel('Population density') # y axis label
+p.title('Consumer-Resource population dynamics') # plot title
+#p.show() #displays figure
+
+f1.savefig('../Results/LV_model.pdf') # save plot 
+
+#####
+
+f2 = p.figure() # open new plot 2
+
+p.plot(pops[:,0], pops[:,1], 'r-') #plots resource (prey) v consumer (pred) density
+p.grid()  #grid lines
+p.xlabel('Resource density')  # x axis label
+p.ylabel('Consumer density')  # y axis label
+p.title('Consumer-Resource population dynamics') # plot title
+#p.show() #displays figure
+
+f2.savefig('../Results/LV_model2.pdf') # saves plot 2
+**********************************************************************
+
+Testing LV1.py...
+
+LV1.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.81692s
+
+======================================================================
+Inspecting script file RunLV.sh...
+
+File contents are:
+**********************************************************************
+#!/bin/bash
+# Author: David Scott
+# Scrit: RunLV.sh
+# Desc: Runs three scipts, LV1.py LV2.py and LV3.py and checks speed
+# Arguements:  
+# Date: Nov 2018
+
+divider===============================
+divider=$divider$divider
+width=60
+
+printf "%$width.${width}s\n" "$divider"
+
+### LV1.py
+python3 -m cProfile -s cumtime LV1.py 2>&1 | head -20 
+echo
+echo -e "LV1.py complete\n"
+printf "%$width.${width}s\n" "$divider"
+
+###  LV2.py 
+python3 -m cProfile LV2.py 1. 0.1 1.5 0.75 -s cumtime 2>&1 | head -20 
+echo
+echo -e "LV2.py complete\n"
+printf "%$width.${width}s\n" "$divider"
+
+### LV3.py 
+python3 -m cProfile LV3.py -s cumtime 2>&1 | head -20 
+echo 
+echo -e "LV3.py complete\n"
+printf "%$width.${width}s\n" "$divider"
+
+### LV4.py 
+python3 -m cProfile LV4.py -s cumtime 2>&1 | head -20 
+echo 
+echo -e "LV4.py complete\n"
+printf "%$width.${width}s\n" "$divider"
+**********************************************************************
+
+Testing RunLV.sh...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+============================================================
+         547905 function calls (537041 primitive calls) in 0.805 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    347/1    0.012    0.000    0.805    0.805 {built-in method builtins.exec}
+        1    0.000    0.000    0.805    0.805 LV1.py:6(<module>)
+    405/6    0.002    0.000    0.354    0.059 <frozen importlib._bootstrap>:966(_find_and_load)
+    405/6    0.002    0
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 10.00454s
+
+======================================================================
+Inspecting script file DrawFW.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+# Date: Nov 2018
+
+"""
+Creates and plots a synthetic food web network
+""" 
+
+__appname__ = '[DrawFW.py]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program" 
+
+### modules imports 
+import networkx as nx
+import scipy as sc 
+import matplotlib.pyplot as p 
+
+def GenRdmAdjList(N = 2, C = 0.5): # C = connection probability 
+    """ Generates a random adjacency list of N -species 
+    food web with "connectance probability" C: the propability 
+    of having a link between any pair of secies in the web. 
+    """
+    Ids = range(N) # list of given range (N)
+    ALst = [] #creates list
+    for i in Ids:  #loop for i in range N 
+        if sc.random.uniform(0,1,1) < C: # 
+            Lnk = sc.random.choice(Ids,2).tolist()
+            if Lnk[0] != Lnk[1]: #avoid self (e.g., cannabilistic) loops
+                ALst.append(Lnk)
+    return ALst
+ 
+# assign number of species and connectance 
+MaxN = 30 #number of species
+C = 0.75  # connectance
+
+#adjacency list representign random food web
+AdjL = sc.array(GenRdmAdjList (MaxN, C))
+AdjL
+
+#generate species node data
+Sps = sc.unique(AdjL) # get species id 
+
+# body sizes for species. uses log10 scale
+#      body sizes log normally distributed 
+SizRan = ([-10,10]) # log10 scale
+Sizs = sc.random.uniform(SizRan[0],SizRan[1],MaxN)
+Sizs 
+
+## visualise distribution size
+p.hist(Sizs) #log10 scale
+p.show()
+
+p.hist(10 ** Sizs) #raw scale
+p.show()
+
+p.close('all') #close all open plot objects
+
+#plot network with node sizes proportional to body size (log)
+# use circular configuration
+pos = nx.circular_layout(Sps) # calculate the coordinates
+
+# generates networkx graph object
+G = nx.Graph()
+
+# add nodes and links (edges)
+G.add_nodes_from(Sps)
+G.add_edges_from(tuple(AdjL)) # this function needs a tuple input 
+
+#generate node sizes, proportional to log body sizes
+NodSizs = 1000 * (Sizs - min(Sizs))/(max(Sizs)-min(Sizs))
+
+# plot and save graph
+f = p.figure()
+nx.draw_networkx(G, pos, node_size = NodSizs) 
+p.show(f)
+f.savefig("../Results/DrawFW.pdf")
+**********************************************************************
+
+Testing DrawFW.py...
+
+DrawFW.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Encountered error:
+/usr/lib/python3/dist-packages/networkx/drawing/nx_pylab.py:522: MatplotlibDeprecationWarning: The is_string_like function was deprecated in version 2.1.
+  if not cb.is_string_like(edge_color) \
+/usr/lib/python3/dist-packages/networkx/drawing/nx_pylab.py:543: MatplotlibDeprecationWarning: The is_string_like function was deprecated in version 2.1.
+  if cb.is_string_like(edge_color) or len(edge_color) == 1:
+/usr/lib/python3/dist-packages/networkx/drawing/nx_pylab.py:724: MatplotlibDeprecationWarning: The is_string_like function was deprecated in version 2.1.
+  if not cb.is_string_like(label):
+
+======================================================================
+Inspecting script file Nets.R...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env Rscript
+# Author: David Scott
+# Contact: david.scott18@imperial.ac.uk
+# Date:  November 15 2018
+# Description: Plots network using igraph
+
+rm(list = ls()) 
+graphics.off() 
+
+# packages
+library(igraph) # Load the igraph package
+
+
+# 	ICL	UoR	CEH	ZSL	CEFAS	Nonacademic/CASE
+# ICL	0	0	10	9	5	70
+# UoR		0	12	0	2	76
+# CEH			0	0	0	6
+# ZSL				0# plot(net, edge.arrow.size=1, edge.curved=.1,
+#      vertex.color="orange", vertex.frame.color="#555555",
+#      vertex.label=V(net)$Type, vertex.label.color="black",
+#      vertex.label.cex=.7) 	0	28
+# CEFAS					0	0
+# Nonacademic/CASE						0
+
+links <- read.csv("../Data/QMEE_Net_Mat_edges.csv", header=T, as.is=T)
+nodes <- read.csv("../Data/QMEE_Net_Mat_nodes.csv", header=T, row.names = 1)
+
+#Create graph object
+net <- graph.adjacency(as.matrix(links), mode = "directed", weighted=TRUE, diag=F)
+        
+#Test plot
+# plot(net, edge.arrow.size=1, edge.curved=.1,
+#      vertex.color="orange", vertex.frame.color="#555555",
+#      vertex.label=V(net)$Type, vertex.label.color="black",
+#      vertex.label.cex=.7) 
+
+# Generate colors based on partner type:
+colrs <- c("green", "red", "blue")
+V(net)$color <- colrs[nodes$Type]
+
+# Set node size based on Number of PIs:
+# V(net)$size <- V(net)$Pis*0.9
+
+V(net)$size <- 50
+
+# Set edge width based on weight (PhD Students):
+E(net)$width <- E(net)$weight
+
+#change arrow size and edge color:
+E(net)$arrow.size <- 1
+E(net)$edge.color <- "gray80"
+
+E(net)$width <- 1+E(net)$weight/10
+
+graphics.off()
+
+svg("../Results/QMEENet.svg",width=7,height=7)
+
+plot(net, edge.curved=0, vertex.label.color="black") 
+
+legend(x=-1.5, y=-0.1, c("University","Hosting Partner", "Non-hosting Partner"), pch=21,
+       col="#777777", pt.bg=colrs, pt.cex=2, cex=.8, bty="n", ncol=1)
+
+dev.off()
+**********************************************************************
+
+Testing Nets.R...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+null device 
+          1 
+
+**********************************************************************
+
+Encountered error:
+Loading required package: methods
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+
+======================================================================
+Inspecting script file run_fmr_R.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+# Date: Nov 2018
+
+"""
+Use of subprocess to run Rscript(fmr.R). Prints 'Succesful' if succesful
+"""
+
+__appname__ = '[run_fmr_R.py]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program" 
+
+# packages
+import subprocess 
+import re
+
+
+p = subprocess.Popen(["Rscript --verbose fmr.R"], stdout=subprocess.PIPE, \
+    stderr=subprocess.PIPE, shell=True)
+stdout, stderr = p.communicate()
+q = stdout.decode()
+print()
+
+if len(re.findall(r"Finished", q)) == 1: # if word "Finished" appears once, 
+    print("Succesful") # print succesful
+else:
+    print("Not Succesful") # if not print not succesful to screen
+**********************************************************************
+
+Testing run_fmr_R.py...
+
+run_fmr_R.py is a Python script file;
+ checking for docstrings...
+
+Found no doctrings!
+1 pt deducted
+
+Current Points = 98
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+Succesful
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.17785s
+
+======================================================================
+Inspecting script file LV2.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+# Date: Nov 2018
+
+"""
+L-V model, takes parameter values from command line. Has defaults also.  
+"""
+
+"""
+Second example of numerical integration using Lotka-Volterra model,
+for predator prey relationship in two dimensional space.
+
+Edited so that it can take parameter values from command line.
+sys.argv[1] = r, [2] = a, [3] = z, [4] = e. values converted to floats.
+
+If five arguments are not given in command line (including script)
+it uses default values: r = 1., a = 0.1, z = 1.5, e = 0.75
+
+parameter values altered so that predator and prey persist with prey 
+density dependence. 
+
+prints final non-zero value on screen.
+""" 
+
+__appname__ = '[LV2.py]'
+__author__ = 'David Scott (david.scott18@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program" 
+
+# Example of numerical integration using lotka-volterra model
+
+### Packages ###
+import scipy as sc 
+import sys
+import scipy.integrate as integrate
+import matplotlib.pylab as p
+
+
+def dCR_dt(pops, t=0): # t=0 is the default value, so can run without input
+    """Lotka-Volterra pred-prey model"""
+    R = pops[0] # resource (prey)
+    C = pops[1] # Consumer (predator)
+    K = 50
+    dRdt = (r * R) * (1 - (R / K)) - a * R * C 
+    dCdt = -z * C + e * a * R * C
+
+    return sc.array([dRdt, dCdt])
+
+type(dCR_dt)
+
+## Define four LV model parameters
+# give defaults and take arguments from command line
+if len(sys.argv) != 5:   
+    r = 1.      # intrinsic (per capita) growth rate of prey pop (time ^-1)
+    a = 0.1     # search rate (per capita) for resource (area x time^-1)
+    z = 2.     # mortality rate 
+    e = .75    # consumer efficiency in converting resource to consumer biomass
+else: # takes arguements from command line and convert to floats
+    r = float(sys.argv[1]) 
+    a = float(sys.argv[2])
+    z = float(sys.argv[3])
+    e = float(sys.argv[4])
+  
+# K is the carry capacity 
+
+t = sc.linspace(0, 50, 1000) # 1000 point between 0 and 15
+# 15 cn be anything. minutes, seconds, years etc 
+# timescales matter in biology
+# depend on parameters. e.g tree would differ from bacteria 
+
+R0 = 10
+C0 = 5
+RC0 = sc.array([R0, C0])
+
+pops, infodict = integrate.odeint(dCR_dt, RC0, t, full_output=True)
+# odeint takes start vales, feeds to function 
+
+type(infodict)
+
+infodict.keys()
+
+infodict['message']
+
+### PLots ###
+
+f1 = p.figure() # open figure
+
+p.plot(t, pops[:,0], 'g-', label='Resource density') # plot time v resource (prey)
+p.plot(t, pops[:,1] , 'b-', label='Consumer density') # plot time v consumer (pred)
+p.grid()    # add grid lines
+p.legend(loc='best') # legend
+p.text(5, 15, "r = %.2f, a = %.2f, z = %.2f, e = %.2f" % (r, a, z, e), fontsize = 15)
+# add text line with parameter values r, a, z, e. 
+#   format so they change depending on value given in command line
+p.xlabel('Time') # add x axis label
+p.ylabel('Population density') # add y axis label 
+p.title('Consumer-Resource population dynamics') # add plot title
+# p.show() #displays figure
+
+f1.savefig('../Results/LV2_model.pdf') # save figure
+
+#####
+
+f2 = p.figure() # open figure
+
+p.plot(pops[:,0], pops[:,1], 'r-') #plots resource against consumber density
+p.grid() # plot grid lines
+p.text(12, 4, "r = %.2f, a = %.2f, z = %.2f, e = %.2f" % (r, a, z, e), fontsize = 15)
+# add text line with parameter values r, a, z, e. 
+#   format so they change depending on value given in command line
+p.xlabel('Resource density') # x axis label
+p.ylabel('Consumer density')    # y axis label
+p.title('Consumer-Resource population dynamics') # plot title 
+# p.show() #displays figure
+
+f2.savefig('../Results/LV2_model2.pdf') #save figure
+**********************************************************************
+
+Testing LV2.py...
+
+LV2.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.80842s
+
+======================================================================
+======================================================================
+Finished running scripts
+
+Ran into 4 errors
+
+======================================================================
+======================================================================
+
+FINISHED WEEKLY ASSESSMENT
+
+Current Points for the Week = 98
+
+NOTE THAT THESE ARE POINTS, NOT MARKS FOR THE WEEK!

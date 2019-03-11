@@ -1,0 +1,298 @@
+\documentclass[11pt]{article}
+%\title{Computing MiniProject}
+%\author{David Scott}
+\date{2019}
+\usepackage{graphicx} % importing plots
+\usepackage{float} % plot positioning on page
+\usepackage{amsmath} % labelling equations
+\usepackage{multicol} % side by side equations
+\usepackage[margin=1in]{geometry} % page margin
+\bibliographystyle{plain}
+\usepackage{lineno} % line numbers
+\usepackage{setspace} %double spacing
+\usepackage{booktabs} % for tables
+\usepackage{fmtcount} % nubers to words
+\usepackage{fancyhdr}
+\usepackage{natbib}
+
+% create a variable with number of curves used. This udates from R
+\newcommand{\Curves}{\input{../Results/Curves.tex}}
+\newcommand{\Points}{\input{../Results/Points.tex}}
+
+
+\title{Computing MiniProject}	% Title
+\author{David Scott}			% Author
+\date{8 March 2019}			    % Date
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\theauthor}
+\lhead{\thetitle}
+\cfoot{\thepage}
+
+
+
+\begin{document}
+	\begin{titlepage}
+		\centering
+		\vspace*{0.5 cm}
+		\includegraphics[scale = 0.15]{logo2.png}\\[1.0 cm]	% University Logo
+		\textsc{\LARGE Comparing Models\newline\newline Thermal Performance Curves}\\[2.0 cm]	% University Name
+		\textsc{\Large CMEE}\\[0.5 cm]				% Course Code
+		\rule{\linewidth}{0.2 mm} \\[0.4 cm]
+		{ \huge \bfseries \thetitle}\\
+		\rule{\linewidth}{0.2 mm} \\[1.5 cm]
+		\textsc{\Large Imperial College London}\\[0.5 cm]	
+		\vspace*{3 cm}
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+				\emph{Submitted To:}\\
+				Dr. Samraat Pawar\\
+				Course Director\\
+			\end{flushleft}
+		\end{minipage}~
+		\begin{minipage}{0.4\textwidth}
+			
+			\begin{flushright} \large
+				\emph{Submitted By :} \\
+				David Scott\\
+				01602669\\
+			\end{flushright}
+			
+		\end{minipage}\\[2 cm]
+		
+	\end{titlepage}
+
+	\linenumbers
+	\doublespacing
+	
+	\tableofcontents
+
+	\newpage
+	\section{Abstract}
+	
+	thermodynamic models
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\section{Introduction}
+	All ectothermic species are dependent on environmental temperature for bodily heat. Metabolism is the biological process of conversion and allocation of energy within the body, maintaining fitness through enhancing processes such survival, growthrate and reproduction. While biology as a field lacks defined laws, metabolics obeys basic physical and chemical laws of mass and energy balance and thermodynamics \cite{brown2004toward}. Biochemical reaction rates of ectotherms are dependent on temperature, metabolic rates increase exponentially with temperature, as described by the boltzman  factor \citep{boltzman1872sitzungsber}. This relationship is a result of temperature changing the proportion of molecules with sufficient kinetic energy. Enzymes catalyze the biochemical reactions that make up an organisms metabolism. Thus environmental temperature effects biological rates of organisms effecting performance and in turn increasing Darwinian fitness. 
+	
+	This positive relationship between biological rates and temperature operates only within normal temperature range specific to each species, increasing in a positive relatonship until the trait reaches an optimum. Beyond which the trait performance will begin to decline. This is a result of metabolism being oppressed under extreme conditons through the up regulation of heat shock proteins and the denaturing of enzymes. This decreases metabolic rate and its associated physiological traits. This relationship can be captured on a unimodal curve, known as a thermal performance curve (TPC). Thus, it is mportant to understand how physiological traits such as metabolic rate  change to a environmental variables to ensure survival. These individual responses can have impacts on the demographics and ultimately distributions and ranges of species, with further implication on communities and ecosystems. 
+	
+	Metabolic Theory of Ecology (MTE) analyses the effects that body size and temperature have on metabolic rate \citep{wang2009temperature}. Biological kinetics of metabolism can be used to predict species diversity. \citep{allen2002global} and \citep{wang2009temperature} used MTE to show that the number of species increases exponentially with environmental temperature when studying the latitudinal gradient of increasing biodiversity from poles to equator. This established a thermodynamic basis for the regulation of species diversity and organisation of ecological communities. The diversity of ecototherms increases through the effect of temperature on biochemical kinetics of metabolism. Generation time and mutation rates correlate with metabolic rates (same boltzman factor to temperature). Thus, higher temperature increases species diversity by accelerating the biochemical reactions that control speciation rates \citep{allen2002global}.  
+	
+	It also has very important application in predicting the physiological responses of species and consequently communities to changes in environmental temperature as a result of climate change. As such TPC's can be viewed as a system to study how environmenal fluxes can alter underlying molecular processes, causing buttlerfly effect like changes from the moleculare to organism level performance through to the community and ecosystem levels. An example can be seen in thermoconformer tropical lizards. Studies looking at the thermal optima for pysiological trait performance and maximal ranges often use lizards as a study secies as they are particulally sensitive to changes environmental temperature. Tropical thermoconformer lizards have been recorded experiencing temperatures at the upper limit or beyond of their physiological optima, reducing performance. Concurrently, climate warming has allowed open habitat basking lizards to cool more slowly, and thus stay within forests longer, increasing competition and predation of the already physiologicaly stressed lizards. This has impliction for tropical forests food webs \citep{huey2009tropical}.  
+	 
+	In this study we took a more theoretical intraspecific approach to analyse TPC curves as we aim to compare multiple mathematical models and determine which best capture the shape of unimodal thermal performance curves, testing both phenomological and mechanical models. A the novel approach first set out by \cite{dell2011systematic} combined 2445 intraspecific temperature responses into one database known as BioTraits. This involves modelling thousands of individual thermal response curves such as those collected for lizards and fitting mathematical models to try and infer the underlying biological processes.  To date much work has been done to investigate this relationship primarliy using the Arhenius equation \citep{delong2017combined}. This equation is good for the monotonic increase but fails to capture the entire unimodal relationship. 
+	
+	For this study, two phenomenological and three mechanistic models were chosen. The phenomenological models fitted were a general cubic polynomial and the Briere model. The briere model was set out by \citep{briere1999novel} for modelling the response of the rate of development of arthropods to temperature. Their parameters do not have any mechanistic intepretation and therefore fail to describe any underlying processes of the relationship. However, if such models fits are supported by the daa they can describe and help predict general trends. For the mechanistic models, the full Schoolfield model was chosen as well as two simplified variants. These models were simiplified versions of the Schoolfield for high and low temperature inactivation energies. The Schoolfield model \eqref{eq:3}, first proposed by \citep{schoolfield1981non} is a modified thermal performace curve which takes account of the inactivation of metabolic rates at high and low temperatures due to thermodynamics and enzyme kinetics. A simplified version of the schoolfield model \eqref{eq:3} can be used in cases where low temperature inactivation the trait is weak or not recorded. This is the Schoolfield high temperature inactivation energy model (Schoolfield High) \eqref{eq:4}. Likewise, a further simplified version of the Schoolfield model \eqref{eq:3} can be used in cases where high temperature inactivation of the trait is weak or not recorded. This is the Schoolfield low temperature inactivation energy model (Schoolfield Low). 
+	
+	The process of model selection is used to infer about unobserved processes based on observed patterns. When one model (or hypothesis) is strongly supported by the data when compared to the other candidate models, it can be deduced that the processes modelled is most likely to have operated in generating the observed data. To infer which model (or hypothesis) was best supported by the observed data, model selection citeria  were used. For this study this included the Akaike Information Criterion (AIC), small sample AIC (AICc) and Bayesian Information Criterion (BIC). For each criterion, a score difference less than two signified models were equally supported. 
+	
+	These criteria strike a balance between model's that goodness of fit and complexity. A tipping point is reached when increasing the number of parameters in a model, as it increases its explanatory power but adds more complexity. Likewise, reducing the number of parameters also reaches a tipping point between decreasing model complexity and a loss of explanatory power. 
+	 
+	
+	\newpage
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\section{Methods}
+	
+	\subsection{Data}
+	Data was obtained from the BioTraits database, a collection of thermal response curves collated by experimentalists around the world \citep{della2013thermal}. There are a total of 2445 intraspecific physiological and ecological trait response curves for 1508 species, and is the largest of such available. For this study a subset of 2165 curves for 533 species was used. Contained were thermal responses of terrestrial and aquatic plant and bacteria growth, respiration and photosynthetic rates. 
+	
+	The data was cleaned by filtering all negative or zero trait value's along with any record missing temperature or trait value's. The most paramaterised model in the candacy set, the full Schoolfield model had six parameters, therefore to satisfy conditions of downstream analysis performance curves with less than eight data points were filtered. 
+	
+	\subsection{The Models}
+	A total of five models were fitted to the data, of which two were phenomenological and three were mechanistic.  
+	
+	\subsubsection{Phenomenological Models}
+	The general Cubic Polynomial model \eqref{eq:1} is phenominological and thus it's parameters (\(B_{0}, B_{1}, B_{2}, B_{3}\)), do not describe any underlying biological processes. Here, \(B\) is the predicted trait value at a given temperature (\(T\)) in Celsius. 
+	   
+	\begin{equation}
+	B = B_{0} + B_{1}T + B_{2}T + B_{3}T \label{eq:1}
+	\end{equation}
+	
+	The Briere model \eqref{eq:2} is also phenominological. Temperature (\(T\))  was taken in Celsius. \(B\) is the predicted trait value. The parameter \(B_{0}\) is a normalisation constant. The minimum and maximum feasible temperature beyond which the trait value goes to zero (is no longer active) are represented by parameters \(T_{0}\) and \(T_{m}\) respectively. 
+	
+	\begin{equation}
+	B = B_{0}T(T - T_0)\sqrt{T_{m} - T} \label{eq:2}
+	\end{equation}
+	
+	\subsubsection{Mechanistic Models}
+	The Schoolfield model \eqref{eq:3}, models the effect of thermodynamics and enzyme kinetics on metabolic rates as a result of temerature \cite{schoolfield1981non}. Temperature was taken in Kelvin. 
+	
+	\begin{equation}
+	B = \frac{B_{0}e^{\frac{-E}{k}(\frac{1}{T} - \frac{1}{283.15})}} {1 + e^{\frac{E_{l}}{k}(\frac{1}{T_{l}} - \frac{1}{T}} + e^{\frac{E_{h}}{k}(\frac{1}{T_{h}} - \frac{1}{T})}}\label{eq:3}
+	\end{equation}
+	
+	The model returns a value of metabolism (\(B\)), at a given temperature \(T\) based on the paramter values; Activtion energy (\(E\)), Low temperature deactivation energy (\(E_{l}\)), Temperature for which the enzyme is half active and half low temperature suppressed (\(T_{l}\)), High temperature deactivation enery (\(E_{h}\)), Temperature at which enzyme is half active and half high temperature suppressed (\(T_{h}\)). \(B_{0}\) is the trait value at reference temperature of 283.15 Kelvin ($10^{o}$C). This represents the growth rate at low temperature, controlling the offset of the curve. \(K\) is the Boltzmann constant (8.617 x $10^{-5}$ eV$\cdot$ $K^{-1}$). 
+	
+	The Schoolfield high temperature inactivation energy model (Schoolfield High) \eqref{eq:4} is a simplified version of the Schoolfield model \eqref{eq:3}, used when low temperature deactivation energy is weak. 
+	
+	\begin{equation}
+	B = \frac{B_{0}e^{\frac{-E}{k}(\frac{1}{T} - \frac{1}{283.15})}} {1 + e^{\frac{E_{h}}{k}(\frac{1}{T_{h}} - \frac{1}{T})}}\label{eq:4}
+	\end{equation}
+	
+	Likewise, a further simplified version of the Schoolfield model \eqref{eq:3} can be used in cases where high temperature inactivation of the trait is weak or not recorded. This is the Schoolfield low temperature inactivation energy model (Schoolfield Low) \eqref{eq:5}. 
+
+	\begin{equation}
+	B = \frac{B_{0}e^{\frac{-E}{k}(\frac{1}{T} - \frac{1}{283.15})}} {1 + e^{\frac{E_{l}}{k}(\frac{1}{T_{l}} - \frac{1}{T})}}\label{eq:5}
+	\end{equation}
+	
+	For both of these models, the paramters are the same as those described for the full Schoolfield equation \eqref{eq:3}, however, the simplified Schoolfield High model \eqref{eq:4}, lack's the parameter's \(E_l\) and \(T_l\) whereas the simplified Schoolfield Low \eqref{eq:5} lack's parameters \(E_h\) and \(T_h\). 
+	
+	\subsection{Starting Parameters}
+	Starting parameter values for each chosen model were estimated based on their biological meaning (where applicable) and added to the data. For the cubic model, the initial parameters were estimated at one as they lacked any biological meaning. For the briere model, \(T_m\) was estimated to be the highest temperature recorded with an associated trait value, whereas \(T_0\) to be the lowest temperature recorded with an associated trait value. \(B_0\) was set at 0.1 (Table \ref{tab1}). 
+	
+	The same initial parameter values were used for the full Schoolfield model and its simplified versions. \(B_0\) was the trait value with a temperature closest to the reference temperature. The highest trait value for each curve ("peak"), and its associated temperature were recorded. This peak signified the optimum temperature for that metabolic trait, after which it began to decrease. From here the pre peak incline and the post peak decline were treated seperately. For the whole curve the trait values were logged and the temerature (kelvin) was transformed, by diving one by the temperature multiplied by the Boltzman constant \eqref{eq:6}.
+	 
+	\begin{multicols}{2}
+		\begin{equation}
+		\frac{1}{K \cdot Temperature} \label{eq:6}
+		\end{equation} 
+		\begin{equation}
+		\frac{1}{K \cdot Parameter} \label{eq:7}
+		\end{equation}
+	\end{multicols}
+	
+	A linear model was then taken on the now transformed incline and the decline. \(E\) was taken to be the slope of the incline, and \(E_h\) to be the slope of the decline. \(E_l\) was calculated as half of \(E\). The absolutes of these values were then taken. For \(T_l\) and \(T_h\), the mean of the logged trait values was obtained and subtracted from the Y intercept of their respective linear model previously calculated. These were then divided by \(E\) and \(E_h\) respectively. Finally these values were converted back to standard temperature in Kelvin by dividing one by the values obtained multiplied by the boltzman constant \eqref{eq:7}.
+	
+	\subsection{Model Fitting}
+	To fit the models to observed data, non-linear least squares (NLLS) method using the Levenberg-Marquald algorithm was used. This minimises the residual sum of squares (RSS) between the observed and predicted data by optimising the estimated starting parameters. Biologically meaningfull lower and upper bounds were set for the parameters to improve the fit. If this did not converge, the starting parameters were then resampled from a gaussian distribution with the estimated starting parameter as the mean. This was repeated a total of five times per model for each unique response curve. The converged model with the lowest AIC score was kept. As well as AIC, small AICc, BIC, \(R^{2}\)and adjusted \(R^{2}\) (\(\bar R^{2}\)) values were also recorded. Once fitted, each of the converged models were plotted on their corresponding curve.
+	
+	\subsection{Model Selection}
+	\subsubsection{Goodness of fit}
+	To infer the level of fit for each model \(R^{2}\) and \(\bar R^{2}\) were calculated following equations \eqref{eq:8} and \eqref{eq:9}. RSS is the residual sum of squars and TSS is the total sum of squares. \(n\) is the number of data points and \(p\) is the number of parameters.
+	
+		\begin{multicols}{2}
+		\begin{equation}
+		R^{2} = 1 - \frac{RSS}{TSS} \label{eq:8}
+		\end{equation} 
+		\begin{equation}
+		\bar R^{2} = 1 - (1 - R^{2})\frac{n - 1}{n - p - 1} \label{eq:9}
+		\end{equation}
+	\end{multicols}
+	
+	\subsubsection{Best Model}
+	AIC uses negative log-likelihood to measure the lack of model fit to the data and a bias correction parameter that takes account of the number of parameters used. Rewards for fit but penalises for model complexity \eqref{eq:10}.
+	
+	\begin{equation}
+	AIC = -2ln[L(\hat\theta_p|y] +2p \label{eq:10}
+	\end{equation}
+	
+	In equation \ref{eq:10} \(p\) is the count of free parameters. This 2p increases, the more parameters are added to the model, penalising for complexity. The other decreases as the other gets better at fitting data, rewarding for a well fitted model. 
+
+	AICc is a the same as AIC only with an added bias correction term for smaller sample sizes \eqref{eq:11}. 
+	
+	\begin{equation}
+	AICc = AIC + \frac{2p^{2} + 2p}{n - p - 1} \label{eq:11}
+	\end{equation}
+	
+	BIC (alternatively known as Schwarz criterion) is a bayesian approach, utilising both a negative log-likelihood to measure lack of fit and a penalty that varies as a function of sample size and the number of parameters used. This measures fit while controlling for both model complexity and sample size. 
+	
+	\begin{equation}
+	BIC = -2ln\left \lfloor{L(\hat\theta_p|y}\right\rfloor + p\cdot ln(n) \label{eq:12}
+	\end{equation}
+
+	The first term of this model rewards for fit, whereas the second term, $p\cdot ln(n)$ increases with the number of parameters and number of observations. This penalises for complex models, with larger penalities for larger datasets.
+	
+	\subsection{Computing Languages}
+	Each component of the workflow was scripted in a reproducable manner. 
+	
+	The R programming language (version 3.4.4) was used for data cleaning, model plotting and model selection. For data manipulation, dplyr package was used, and ggplot2 for clean plotting. 
+	
+	Python (version 3.6.7) was used due to its speed during NLLS fitting, availing of the lmfit package \citep{newville2016lmfit}. Pandas and NumPy were also used for data handling. 
+	
+	\LaTeX was used to compile the report due to its type setting features and its ability to take inputs from other programs such as R. 
+	
+	A bash script was then used to sequentially run each of the differing language components of the workflow. All scripts and data used were made available on GitHub.  
+	
+
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	
+	
+	
+	\newpage
+	
+	\section{Results}
+	\subsection{Parameters}
+	Post data cleaning, a total of \Curves individual thermal response curves remained, each with over eight data points. The observed data covered 127 different metabolic traits of 527 species across seven climates and habitats. The data consisted of 191 monotonicaly increasing, 33 monotonically decreasing and 763 unimodal curves. For the five models that were fitted to the data, parameter values were recorded prior (estimations) and post (optimised) minimisation for each of the models. Table \ref{tab1} provides a summary of their median values across all curves (\(n = \Curves\)).
+	
+	\begin{table}[H]
+		\centering
+		\caption{The median estimated and optimised starting parameter values for each model (\(n\)= \protect\Curves).} 
+		\input{../Results/Params.tex}
+		\label{tab1}
+	\end{table}
+	
+	\newpage
+	\subsection{Goodness of Fit}
+	Each of the phenomenological and mechanistic models converged on all of the \Curves curves with a strong fit (Table \ref{tab2}). According to the median $\bar R^{2}$ values, the Cubic had the best fit (0.88), this was followed by the Schoolfield Low (0.84). The full Schoolfield and the Schoolfield High had very similar fits with 0.76 and 0.75 respectively. The Briere had the least best fit at 0.68 (Table \ref{tab2}). An example plot seen in Figure \ref{fig1} represents the five models fitted to the data.
+	
+	\begin{figure}[H]
+		\includegraphics[width=\linewidth]{../Results/Model_Plots/MTD2079.pdf}
+		\caption{Five models fitted to data. Observed data represented by black points (\(n = 11\)). Each model was fitted to simulated temperature data, within the range of observed data (\(n = 50\)). The phenomenologial models are represented by have dashed lines, whereas mechanistic models have full lines. The mechanistic models are fitted to temperature in Kelvin, but plotted on Celsius. Each model shows a good fit. FinalID = MTD2079.}
+		\label{fig1}
+	\end{figure}
+	
+	
+	\begin{table}[H]
+		\centering
+		\caption{The total convergence along with the median \(R^2\), adjusted \(R^2\), Akaike Information Criterion (AIC), small sample AIC (AICc) and Bayesian Information Criterion (BIC) values were recorded for each model across all thermal performance curves (\(n\) = \protect\input{../Results/Curves.tex}). Of the phenomenological models, cubic had the best fit whereas Schoolfield Low had the best fit fo the mechanistic models. } 
+		\input{../Results/Scores.tex}
+		\label{tab2}
+	\end{table}
+	
+	\subsection{Model Selection}
+	Each model was scored according to information criteria. Those with the lowest scores were deemed to be the best of the set of models at explaining the observed data. Models had equal support if the difference in score was less than two. The AIC and AICc had identical median values yet differed greatly in terms of the number of best fits per model. Both AIC and AICc had different median and total best fits per model values than BIC. While each criteria total best fits differed they remained proportionally similar for each model except for the Briere (Figure \ref{fig2}; Table \ref{tab2}). 
+	
+	The total number of times each model was best supported by the observed data on a per curve basis, the cubic polynomial consistently ranked best across all three criteria. The Schoolfield Low was ranked as the second best in both AIC and BIC. However, the AICc ranked the Briere ahead of Schoolfield Low. The Briere also scored higher than the Schoolfield High according to the BIC, whereas the AIC scored the Schoolfield High model higher by a marginal difference. For each criteria, the full Schoolfield was best suited to the least amount of curves (Figure \ref{fig2}). 
+	
+	\begin{figure}[H]
+		\includegraphics[width=\linewidth]{../Results/AIC_Plots/Lowest_AICscores.pdf}
+		\caption{The number of times each model was ranked best according to the Akaike Information Criterion (AIC), small sample AIC (AICc) and Bayesian Information Criterion (BIC). Each model can have multiple best models. The phenomenological Cubic Polynomial was supported by the most data sets whereas the mechanistic Schoolfield was supported by the least.}
+		\label{fig2}
+	\end{figure} 
+	
+
+	\newpage
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\section{Discussion}
+	To simulataneously infer which model or set of models are best supported by the observed data, information criteria were utilised.  In general the more parameters that are added to a model, the better it will be at explaining the data, but the more complex it will become. AIC and BIC strike a balance between complex models and models that explain the observed data well. AIC describes fit and controls for model complexity well but it fails to account for small sample sizes. It was for this reason the AICc was also used. The BIC on the otherhand provides a good indication of fit, while controlling for both complexity and sample size. One could argue the discontinution of BIC after introducing the AICc into the study, however both differ as AICc (and AIC) are based on Kullback-Leibler information theory whereas BIC is fundamentally a bayesian approach \citep{johnson2004model}. Therefore for the purpose of comparison both were included. 
+	
+	Calculated \(R^2\) values prove a good measure of fit but they do not control for model complexity. The cubic model had the best fit throughout with the highest median \(R^2\) values. This was followed by the mechanistic full Schoolfield model. This was expected as the full Schoolfield is the most heavily parameterised model in the set. This gives it the most explanatory power without being penalised for complexity. \(\bar R^2\) attempts to control for this bias. This is noted as the simplified Schoolfield Low (with two less parameters) had the highest \(\bar R^2\) values of the mechanistic models. However, \(\bar R^2\) is not effective in correcting for higher complexity \citep{johnson2004model} and could result in high variance in parameter estimates and potential spuris inferences about underlying processes \citep{johnson2004model}. It was for this reason that the model with the lowest AIC score was selected when minimising residual (optimising parameter) values as opposed to those with the highest \(\bar R^2\). Therefore, it was not used as a method of model selection, but as an indicator of fit.
+	
+	The total number of times each model had the highest \(\bar R^2\) value and was supported or equaly supported by the data within each response curve was recorded. The Cubic polynomial and Schoolfield Low proved to be the best fit across the three criteria and in \(\bar R^2\) value of the phenomenological and mechanistic models respectively. Between both phenomenological and mechanistic models, the Briere was the only model to increase in total best fits from AIC to AICc or BIC. However, far fewer times had it the best \(\bar R^2\) value. This was perhaps due to it having the least number of parameters. Likewise, the overall poor performance of the full Schoolfield model may be attributed to the high number of parameters it uses for which it is heavily penalised.  
+	
+	Overall the Cubic polynomial had the best fit.	This is due to it being a simple mathematical function designed to form a unimodal shape, making it a near perfect fit. As such, it does not provide any insight into the underlying processes that determine the shape of the curve, but may be of use in predicting general trends. In contrast the Schoolfield Low which was overall the second best fitted model was mechanistic. As such this allows inferences to be made on the underlying metabolic processes driving the response of the traits to temperature. Knowledge of these mechanistic processes is fundamental to understanding thermal ecology \citep{delong2017combined}.
+	
+	Schoolfield Low is a simplified version of the full Schoolfield to deal with curves in which high temperature deactivation energy is weak or not present (monotonically increasing), of which there were 191. In constrast the Schoolfield High, which had the same number of parameters as both the Cubic and the Schoolfield Low performed far worse. This model was designed for curves which lack low temperature deactivation energy, of which there were only 33. 
+	
+	As many of the curves within the dataframe were not fully unimodal may be due to recording errors or the specific aims of individuals experiments. This may have led to errors in calculating estimated starting parameter values. In future work the starting estimates could be improved to increase fit with less computational speed during the minimisation process. This could be achieved through refining the methodology as methods of parameter estimation are widely debated \citep{slezak2010optimal}. Only applying the respective simplified schoolfield model to either monotonically increasing, or decreasing curves may also be beneficial. When comparing models with parameters of biological interpretation versus staistially arbitary models, it is important consider accuracy of the estimated starting parameters. 
+	
+	However, it is important to note that once the model fitting was complete it was clear that each of the models had converged. This lends support to the method taken using NLLS fitting with the Levenberg-Marquald algorithm and the methodology in estimating initial parameters \citep{newville2016lmfit}. Therefore, the NLLS fitting could be run for longer but this is computationally expensive. 
+	
+	In future study, alternative mechanistic models such as the enzyme assisted Arrhenius (EAAR) equation could also be trialled \citep{delong2017combined}. Also an additional criteria, Akaike weight's for model averaging could be used in cases were models are equally supported, reducing model selection bias. One draw back to the model selection criteria used in this study is that while tell if the model stikes a better balance between model complexity and explanatory power than the other models within the candidicy set, they do not tell how well a model explains the data. 
+	
+	Overall the cubic polynomial was the best model across all ranges, and while it does not lend insight into the underlying biological processes its should not be overlooked due to their simplicity in accurately described biological phenomina. 
+	
+	\newpage
+	\bibliographystyle{agsm}
+	\bibliography{Writeup}
+
+	
+
+\end{document}
+
+

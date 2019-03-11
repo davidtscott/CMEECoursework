@@ -17,8 +17,8 @@ evince ../Results/$texfile.pdf & # displays pdf output on screen
 ## Cleanup  # Removing all other files created other than .bib .pdf and .tex
 rm *~
 rm *.aux
-rm *.bbl   # .bbl also added to script to remove 
-rm *.blg   # .blg also added to script to remove as these files are not required
+rm *.bbl   # .bbl also added to script to remove as these files are not required
+rm *.blg   # .blg also added ... 
 rm *.dvi
 rm *.log
 rm *.nav 

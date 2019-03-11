@@ -75,8 +75,8 @@ __pycache__
 README.html
 
 ### week ###################
-MiniProject/Results/AIC_Plots/*
-MiniProject/Results/Model_Plots/*
+MiniProject/Results/AIC_Plots/**
+MiniProject/Results/Model_Plots/**
 MiniProject/Results/*
 
 !MiniProject/Results/README.md

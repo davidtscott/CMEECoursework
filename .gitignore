@@ -80,8 +80,8 @@ MiniProject/Results/Model_Plots/**
 MiniProject/Results/*
 
 !MiniProject/Results/README.md
-!MiniProject/Results/AIC_Plots/
-!MiniProject/Results/Model_Plots/
+!MiniProject/Results/AIC_Plots/README.md
+!MiniProject/Results/Model_Plots/README.md
 
 
 Week9/

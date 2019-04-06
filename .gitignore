@@ -22,7 +22,7 @@
 *.tar
 *.zip
 
-*.pdf
+#*.pdf
 
 # Logs and databases #
 ######################
